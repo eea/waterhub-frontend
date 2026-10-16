@@ -1,0 +1,31 @@
+# Folders
+.git
+**/.git
+core
+packages/*
+!packages/volto-waterhub-frontend
+!packages/volto-waterhub-frontend/**
+packages/*/node_modules
+.storybook
+build
+cache
+coverage
+locales/*.json
+node_modules
+omelette
+
+# Files
+.env
+*.log
+.dockerignore
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitignore
+.gitmodules
+.prettierignore
+cypress*.json
+docker-compose.yml
+Dockerfile
+Jenkinsfile
+start_.sh

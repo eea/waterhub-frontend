@@ -1,0 +1,6 @@
+{
+    "title": "Waterhub Frontend",
+    "description": "Copernicus Thematic Water Hub Volto frontend",
+    "volto_version": "19.5.0",
+    "__template__": "frontend_project"
+}
