@@ -49,3 +49,9 @@ regexTarget = "match"
 regexes = [
   '''SONAR_AUTH_TOKEN''',
 ]
+
+[[allowlists]]
+description = "Allow the repository pnpm configuration; it contains no credentials"
+paths = [
+  '''(^|/)\.npmrc$''',
+]
