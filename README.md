@@ -1,4 +1,4 @@
-# Waterhub Frontend
+# Copernicus Thematic Water Hub Frontend
 
 Copernicus Thematic Water Hub Volto frontend
 
