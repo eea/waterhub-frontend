@@ -6,5 +6,13 @@
     "https": "https://github.com/plone/volto.git",
     "tag": "19.5.0",
     "filterBlobs": true
+  },
+  "volto-eea-design-system": {
+    "output": "packages",
+    "package": "@eeacms/volto-eea-design-system",
+    "url": "git@github.com:eea/volto-eea-design-system.git",
+    "https": "https://github.com/eea/volto-eea-design-system.git",
+    "branch": "volto19",
+    "filterBlobs": true
   }
 }
