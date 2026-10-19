@@ -7,6 +7,14 @@
     "tag": "19.5.0",
     "filterBlobs": true
   },
+  "volto-eea-kitkat": {
+    "output": "packages",
+    "package": "@eeacms/volto-eea-kitkat",
+    "url": "git@github.com:eea/volto-eea-kitkat.git",
+    "https": "https://github.com/eea/volto-eea-kitkat.git",
+    "branch": "volto19",
+    "filterBlobs": true
+  },
   "volto-eea-design-system": {
     "output": "packages",
     "package": "@eeacms/volto-eea-design-system",

@@ -94,6 +94,7 @@
   },
   "dependencies": {
     "@sentry/cli": "1.77.3",
+    "@eeacms/volto-eea-kitkat": "workspace:*",
     "@eeacms/volto-eea-design-system": "workspace:*",
     "@eeacms/volto-eea-website-theme": "workspace:*",
     "@plone/volto": "workspace:*",

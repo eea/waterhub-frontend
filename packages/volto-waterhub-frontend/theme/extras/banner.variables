@@ -1,0 +1,8 @@
+/*******************************
+          Page Banner
+*******************************/
+
+@bannerBackgroundColor: @primaryColor;
+@computerContentPadding: 3.5rem 0 1.5rem;
+@computerTitleFontSize: 2.5rem;
+

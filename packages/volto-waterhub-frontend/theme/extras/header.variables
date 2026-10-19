@@ -1,0 +1,8 @@
+/*******************************
+            Header
+*******************************/
+
+@computerMainSectionHeight: 104px;
+@computerLogoMaxWidth: 280px;
+@computerLogoMarginTop: 0;
+

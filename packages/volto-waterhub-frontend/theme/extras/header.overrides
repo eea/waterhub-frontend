@@ -1,0 +1,24 @@
+/*******************************
+            Header
+*******************************/
+
+.top.bar {
+  background: @primaryColor;
+}
+
+.top.bar > .ui.container > .item,
+.top.bar > .ui.container > .item > .ui.dropdown,
+.top.bar > .ui.container > .item > .ui.dropdown > .text,
+.top.bar .official-union .ui.dropdown > .text {
+  color: @white;
+}
+
+.top.bar > .ui.container > .item > .ui.active.visible.dropdown,
+.top.bar > .ui.container > .item > .ui.active.visible.dropdown > .text {
+  color: @primaryColor;
+}
+
+.search-action {
+  background-color: @primaryColor;
+}
+

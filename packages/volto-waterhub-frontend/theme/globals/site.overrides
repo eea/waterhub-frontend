@@ -1,0 +1,17 @@
+/*******************************
+       WaterHub content
+*******************************/
+
+#page-document h2 {
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid fade(@primaryColor, 55%);
+  color: @primaryColor;
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+#page-document h2 + * {
+  margin-top: 1.25rem;
+}
+
