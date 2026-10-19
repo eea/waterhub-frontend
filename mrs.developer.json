@@ -14,5 +14,13 @@
     "https": "https://github.com/eea/volto-eea-design-system.git",
     "branch": "volto19",
     "filterBlobs": true
+  },
+  "volto-eea-website-theme": {
+    "output": "packages",
+    "package": "@eeacms/volto-eea-website-theme",
+    "url": "git@github.com:eea/volto-eea-website-theme.git",
+    "https": "https://github.com/eea/volto-eea-website-theme.git",
+    "branch": "volto19",
+    "filterBlobs": true
   }
 }
