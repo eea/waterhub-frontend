@@ -5,6 +5,11 @@ const webpack = require('webpack');
 const plugins = (defaultPlugins) => defaultPlugins;
 
 const modify = (config, { target }) => {
+  const themeConfigPath = `${__dirname}/theme/theme.config`;
+
+  config.resolve.alias['../../theme.config$'] = themeConfigPath;
+  config.resolve.alias['../../theme.config'] = themeConfigPath;
+
   // The server bundle runs in Node and is not downloaded by the browser, so
   // Webpack's browser-oriented asset size hints are not useful for this target.
   // In CI these hints are promoted to errors and would otherwise fail the build.
