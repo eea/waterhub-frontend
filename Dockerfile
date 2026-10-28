@@ -28,11 +28,6 @@ EOT
 
 FROM plone/frontend-prod-config:${VOLTO_VERSION}
 
-LABEL maintainer="GhitaB <ghitabizau27@gmail.com>" \
-      org.label-schema.name="waterhub-frontend" \
-      org.label-schema.description="Copernicus Thematic Water Hub Volto frontend" \
-      org.label-schema.vendor="GhitaB"
-
 COPY --from=builder /app/ /app/
 
 USER root
