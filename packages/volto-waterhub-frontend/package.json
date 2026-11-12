@@ -19,10 +19,17 @@
   "scripts": {
     "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon"
   },
-  "addons": [],
+  "addons": [
+    "volto-form-block"
+  ],
   "theme": "",
   "dependencies": {
-    "compression-webpack-plugin": "10.0.0"
+    "@loadable/component": "5.16.7",
+    "compression-webpack-plugin": "10.0.0",
+    "friendly-challenge": "0.9.20",
+    "react-dnd": "5.0.0",
+    "react-dnd-html5-backend": "5.0.1",
+    "volto-form-block": "3.19.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -32,10 +39,10 @@
     "@plone/registry": "workspace:*",
     "@plone/scripts": "workspace:*",
     "@plone/types": "workspace:*",
+    "@testing-library/react": "^16.2.0",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
     "typescript": "^5.7.3",
-    "@testing-library/react": "^16.2.0",
     "vitest": "^3.1.2"
   }
 }
