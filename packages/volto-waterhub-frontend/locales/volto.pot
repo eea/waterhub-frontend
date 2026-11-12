@@ -1,5 +1,5 @@
 # Portuguese translations for @eeacms/volto-waterhub-frontend.
-# Copyright (C) GhitaB
+# Copyright (C) European Environment Agency
 # This file is distributed under the same license as the @eeacms/volto-waterhub-frontend package.
 #
 msgid ""
