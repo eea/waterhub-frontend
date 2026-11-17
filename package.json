@@ -2,7 +2,7 @@
   "name": "waterhub-frontend-dev",
   "description": "Copernicus Thematic Water Hub Volto frontend",
   "license": "MIT",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "scripts": {
     "preinstall": "npx --yes only-allow pnpm",
     "start": "pnpm build:deps && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto start",
