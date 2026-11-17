@@ -147,6 +147,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^7.7.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.9.3)
+      bundlewatch:
+        specifier: 0.3.3
+        version: 0.3.3
       compression-webpack-plugin:
         specifier: 10.0.0
         version: 10.0.0(webpack@5.112.0(postcss@8.5.30))
@@ -164,13 +167,13 @@ importers:
         version: 9.1.2(eslint@8.57.1)
       eslint-config-react-app:
         specifier: ^7.0.1
-        version: 7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)(typescript@5.9.3)
+        version: 7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)(typescript@5.9.3)
       eslint-import-resolver-alias:
         specifier: ^1.1.2
         version: 1.1.2(eslint-plugin-import@2.32.0)
       eslint-import-resolver-babel-plugin-root-import:
         specifier: ^1.1.1
-        version: 1.1.1(babel-plugin-root-import@6.6.0)(eslint-plugin-import@2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1))
+        version: 1.1.1(babel-plugin-root-import@6.6.0)(eslint-plugin-import@2.32.0)
       eslint-import-resolver-typescript:
         specifier: ^3.6.1
         version: 3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1)
@@ -961,7 +964,7 @@ importers:
         version: 9.1.2(eslint@8.57.1)
       eslint-config-react-app:
         specifier: ^7.0.1
-        version: 7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)(typescript@5.9.3)
+        version: 7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)(typescript@5.9.3)
       eslint-import-resolver-alias:
         specifier: ^1.1.2
         version: 1.1.2(eslint-plugin-import@2.32.0)
@@ -6203,6 +6206,9 @@ packages:
     resolution: {integrity: sha512-zIURGIS1E1Q4pcrMjp+nnEh+16G56eG/MUllJH8yEvw7asDo7Ac9uhC9KIH5jzpITueEZolfYglnCGIuSBz39g==}
     engines: {node: '>=4'}
 
+  axios@0.24.0:
+    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+
   axios@1.20.0:
     resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
 
@@ -6476,6 +6482,11 @@ packages:
     peerDependencies:
       esbuild: '>=0.18'
 
+  bundlewatch@0.3.3:
+    resolution: {integrity: sha512-qzSVWrZyyWXa546JpAPRPTFmnXms9YNVnfzB05DRJKmN6wRRa7SkxE4OgKQmbAY74Z6CM2mKAc6vwvd2R+1lUQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   bytes@3.1.2:
     resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
     engines: {node: '>= 0.8'}
@@ -6649,6 +6660,9 @@ packages:
   chrome-trace-event@1.0.4:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
+
+  ci-env@1.17.0:
+    resolution: {integrity: sha512-NtTjhgSEqv4Aj90TUYHQLxHdnCPXnjdtuGG1X8lTfp/JqeXTdw0FTWl/vUAPuvbWZTF8QVpv6ASe/XacE+7R2A==}
 
   ci-info@2.0.0:
     resolution: {integrity: sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==}
@@ -6825,6 +6839,10 @@ packages:
 
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
+    engines: {node: '>= 6'}
+
+  commander@5.1.0:
+    resolution: {integrity: sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==}
     engines: {node: '>= 6'}
 
   commander@6.2.1:
@@ -9986,6 +10004,9 @@ packages:
 
   jsonfile@6.2.1:
     resolution: {integrity: sha512-zwOTdL3rFQ/lRdBnntKVOX6k5cKJwEc1HdilT71BWEu7J41gXIB2MRp+vxduPSwZJPWBxEzv4yH1wYLJGUHX4Q==}
+
+  jsonpack@1.1.5:
+    resolution: {integrity: sha512-d2vwomK605ks7Q+uCpbwGyoIF5j+UZuJjlYcugISBt3CxM+eBo/W6y63yVPIyIvbYON+pvJYsYZjCYbzqJj/xQ==}
 
   jsonrepair@3.15.0:
     resolution: {integrity: sha512-wy8OTjwsJwQRnQJkKnMJJ9vcytRdBPAgIF/Hy6+s1dAj42BHMKiyL8JzEieIl3JY7idt8eyHwBWTO8mh/+mtwA==}
@@ -17072,11 +17093,7 @@ snapshots:
       jest-runner: 26.6.3
       jest-runtime: 26.6.3
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - supports-color
-      - ts-node
-      - utf-8-validate
 
   '@jest/transform@26.6.2':
     dependencies:
@@ -19768,6 +19785,22 @@ snapshots:
 
   axe-core@4.7.2: {}
 
+  axios@0.24.0:
+    dependencies:
+      follow-redirects: 1.16.1(debug@4.4.3)
+    transitivePeerDependencies:
+      - debug
+
+  axios@1.20.0:
+    dependencies:
+      follow-redirects: 1.16.1(debug@4.4.3)
+      form-data: 4.0.6
+      https-proxy-agent: 5.0.1
+      proxy-from-env: 2.1.0
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+
   axios@1.20.0(debug@4.3.4):
     dependencies:
       follow-redirects: 1.16.1(debug@4.3.4)
@@ -20239,6 +20272,21 @@ snapshots:
       esbuild: 0.27.7
       load-tsconfig: 0.2.5
 
+  bundlewatch@0.3.3:
+    dependencies:
+      axios: 0.24.0
+      bytes: 3.1.2
+      chalk: 4.1.2
+      ci-env: 1.17.0
+      commander: 5.1.0
+      glob: 7.2.3
+      gzip-size: 6.0.0
+      jsonpack: 1.1.5
+      lodash.merge: 4.6.2
+      read-pkg-up: 7.0.1
+    transitivePeerDependencies:
+      - debug
+
   bytes@3.1.2: {}
 
   bytestreamjs@2.0.1: {}
@@ -20468,6 +20516,8 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
+  ci-env@1.17.0: {}
+
   ci-info@2.0.0: {}
 
   ci-info@3.9.0: {}
@@ -20632,6 +20682,8 @@ snapshots:
   commander@2.20.3: {}
 
   commander@4.1.1: {}
+
+  commander@5.1.0: {}
 
   commander@6.2.1: {}
 
@@ -22147,7 +22199,7 @@ snapshots:
     dependencies:
       eslint: 8.57.1
 
-  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)(typescript@5.9.3):
+  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)(typescript@5.9.3):
     dependencies:
       '@babel/core': 7.29.7
       '@babel/eslint-parser': 7.29.9(@babel/core@7.29.7)(eslint@8.57.1)
@@ -22176,13 +22228,22 @@ snapshots:
 
   eslint-import-resolver-alias@1.1.2(eslint-plugin-import@2.32.0):
     dependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
 
   eslint-import-resolver-babel-plugin-root-import@1.1.1(babel-plugin-root-import@6.6.0)(eslint-plugin-import@2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)):
     dependencies:
       babel-plugin-root-import: 6.6.0
       eslint-import-resolver-node: 0.2.3
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)
+      json5: 0.5.1
+    transitivePeerDependencies:
+      - supports-color
+
+  eslint-import-resolver-babel-plugin-root-import@1.1.1(babel-plugin-root-import@6.6.0)(eslint-plugin-import@2.32.0):
+    dependencies:
+      babel-plugin-root-import: 6.6.0
+      eslint-import-resolver-node: 0.2.3
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
       json5: 0.5.1
     transitivePeerDependencies:
       - supports-color
@@ -22214,7 +22275,7 @@ snapshots:
       tinyglobby: 0.2.17
       unrs-resolver: 1.12.2
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -22278,6 +22339,35 @@ snapshots:
       - supports-color
 
   eslint-plugin-import@2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1):
+    dependencies:
+      '@rtsao/scc': 1.1.0
+      array-includes: 3.2.0
+      array.prototype.findlastindex: 1.2.6
+      array.prototype.flat: 1.3.3
+      array.prototype.flatmap: 1.3.3
+      debug: 3.2.7(supports-color@8.1.1)
+      doctrine: 2.1.0
+      eslint: 8.57.1
+      eslint-import-resolver-node: 0.3.10
+      eslint-module-utils: 2.14.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-node@0.3.10)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)
+      hasown: 2.0.4
+      is-core-module: 2.17.0
+      is-glob: 4.0.3
+      minimatch: 3.1.5
+      object.fromentries: 2.0.8
+      object.groupby: 1.0.3
+      object.values: 1.2.1
+      semver: 6.3.1
+      string.prototype.trimend: 1.0.10
+      tsconfig-paths: 3.15.0
+    optionalDependencies:
+      '@typescript-eslint/parser': 7.18.0(eslint@8.57.1)(typescript@5.9.3)
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.2.0
@@ -24290,7 +24380,11 @@ snapshots:
       pretty-format: 26.6.2
       throat: 5.0.0
     transitivePeerDependencies:
+      - bufferutil
+      - canvas
       - supports-color
+      - ts-node
+      - utf-8-validate
 
   jest-leak-detector@26.6.2:
     dependencies:
@@ -24749,6 +24843,8 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
+
+  jsonpack@1.1.5: {}
 
   jsonrepair@3.15.0: {}
 
@@ -29989,7 +30085,7 @@ snapshots:
 
   wait-on@9.5.1:
     dependencies:
-      axios: 1.20.0(debug@4.4.3)
+      axios: 1.20.0
       joi: 18.2.9
       lodash: 4.18.1
       rxjs: 7.8.2

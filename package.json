@@ -106,6 +106,7 @@
     "@cypress/code-coverage": "^3.10.0",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
+    "bundlewatch": "0.3.3",
     "cypress": "13.17.0",
     "cypress-fail-fast": "^5.0.1",
     "compression-webpack-plugin": "10.0.0",
