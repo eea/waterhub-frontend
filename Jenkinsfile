@@ -64,9 +64,13 @@ pipeline {
               docker.build(imageName, '--build-arg VOLTO_VERSION=19.5.0 .')
               // Adjust the backend image to your project's own backend.
               sh "docker run --rm -d --name=${env.BUILD_TAG}-backend --network=${networkName} --network-alias=backend -e SITE=Plone eeacms/plone-backend"
-              sh "docker run --rm -d --name=${env.BUILD_TAG}-frontend --network=${networkName} -p 3000:3000 -e RAZZLE_INTERNAL_API_PATH=http://backend:8080/Plone -e RAZZLE_DEV_PROXY_API_PATH=http://backend:8080/Plone ${imageName}"
+              sh "docker run --rm -d --name=${env.BUILD_TAG}-frontend --network=${networkName} --network-alias=frontend -p 3000:3000 -e RAZZLE_INTERNAL_API_PATH=http://backend:8080/Plone -e RAZZLE_DEV_PROXY_API_PATH=http://backend:8080/Plone ${imageName}"
               sh 'pnpm exec wait-on --timeout 120000 http://localhost:3000'
-              sh 'pnpm cypress:smoke'
+              // The Jenkins agent has no Xvfb or browsers, so run the smoke test in
+              // the official Cypress image, on the same network as the frontend.
+              docker.image('cypress/included:13.17.0').inside("--network=${networkName} --shm-size=2g --entrypoint='' -e HOME=/tmp") {
+                sh 'NODE_ENV=test CYPRESS_BASE_URL=http://frontend:3000 ./node_modules/.bin/cypress run --config-file "$PWD/cypress.config.js" --spec "$PWD/cypress/e2e/smoke.cy.js"'
+              }
             } finally {
               sh script: "docker rm -f ${env.BUILD_TAG}-frontend", returnStatus: true
               sh script: "docker rm -f ${env.BUILD_TAG}-backend", returnStatus: true
