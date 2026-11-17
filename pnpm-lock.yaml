@@ -164,13 +164,13 @@ importers:
         version: 9.1.2(eslint@8.57.1)
       eslint-config-react-app:
         specifier: ^7.0.1
-        version: 7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)(typescript@5.9.3)
+        version: 7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)(typescript@5.9.3)
       eslint-import-resolver-alias:
         specifier: ^1.1.2
         version: 1.1.2(eslint-plugin-import@2.32.0)
       eslint-import-resolver-babel-plugin-root-import:
         specifier: ^1.1.1
-        version: 1.1.1(babel-plugin-root-import@6.6.0)(eslint-plugin-import@2.32.0)
+        version: 1.1.1(babel-plugin-root-import@6.6.0)(eslint-plugin-import@2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1))
       eslint-import-resolver-typescript:
         specifier: ^3.6.1
         version: 3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1)
@@ -961,7 +961,7 @@ importers:
         version: 9.1.2(eslint@8.57.1)
       eslint-config-react-app:
         specifier: ^7.0.1
-        version: 7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)(typescript@5.9.3)
+        version: 7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)(typescript@5.9.3)
       eslint-import-resolver-alias:
         specifier: ^1.1.2
         version: 1.1.2(eslint-plugin-import@2.32.0)
@@ -1644,26 +1644,26 @@ importers:
         specifier: 5.1.2
         version: 5.1.2
       '@eeacms/volto-block-data-table':
-        specifier: 2.0.2
-        version: 2.0.2(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 2.0.5
+        version: 2.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@eeacms/volto-block-divider':
         specifier: 8.0.2
         version: 8.0.2(react@18.2.0)
       '@eeacms/volto-block-image-cards':
-        specifier: 4.0.2
-        version: 4.0.2(classnames@2.5.1)(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react-loadable@5.5.0(react@18.2.0))(react@18.2.0)(uuid@14.0.3)
+        specifier: 4.0.4
+        version: 4.0.4(classnames@2.5.1)(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react-loadable@5.5.0(react@18.2.0))(react@18.2.0)(uuid@14.0.3)
       '@eeacms/volto-block-style':
         specifier: 9.0.1
         version: 9.0.1(react@18.2.0)
       '@eeacms/volto-block-toc':
-        specifier: 9.0.1
-        version: 9.0.1
+        specifier: 9.0.4
+        version: 9.0.4
       '@eeacms/volto-call-to-action-block':
         specifier: 6.0.1
         version: 6.0.1
       '@eeacms/volto-columns-block':
-        specifier: 9.0.4
-        version: 9.0.4(react@18.2.0)
+        specifier: 9.0.5
+        version: 9.0.5(react@18.2.0)
       '@eeacms/volto-controlpanel':
         specifier: 2.0.1
         version: 2.0.1
@@ -1680,8 +1680,8 @@ importers:
         specifier: 9.0.2
         version: 9.0.2
       '@eeacms/volto-listing-block':
-        specifier: 10.1.0
-        version: 10.1.0(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 11.0.5
+        version: 11.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@eeacms/volto-matomo':
         specifier: 7.0.1
         version: 7.0.1(react@18.2.0)
@@ -1701,8 +1701,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       '@eeacms/volto-sentry-rancher-config':
-        specifier: 6.0.3
-        version: 6.0.3
+        specifier: 6.0.5
+        version: 6.0.5
       '@eeacms/volto-slate-footnote':
         specifier: 8.0.2
         version: 8.0.2
@@ -1716,11 +1716,11 @@ importers:
         specifier: 7.0.1
         version: 7.0.1
       '@eeacms/volto-statistic-block':
-        specifier: 7.0.1
-        version: 7.0.1(react@18.2.0)
+        specifier: 7.0.2
+        version: 7.0.2(react@18.2.0)
       '@eeacms/volto-tabs-block':
-        specifier: 10.0.4
-        version: 10.0.4(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 10.0.5
+        version: 10.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@eeacms/volto-tags-block':
         specifier: 4.0.1
         version: 4.0.1
@@ -1749,8 +1749,8 @@ importers:
         specifier: 5.0.1
         version: 5.0.1
       '@plone-collective/volto-sentry':
-        specifier: 1.0.1
-        version: 1.0.1(encoding@0.1.13)
+        specifier: 1.0.2
+        version: 1.0.2(encoding@0.1.13)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -3066,14 +3066,14 @@ packages:
   '@eeacms/volto-banner@5.1.2':
     resolution: {integrity: sha512-HKsD042kJB+tE16tr1SqAS7UheMLyhQKSAPbRenfEGZK2UFOn4dinG2M4OnrieQexVRcaipg9T6IqK1kkrQvCQ==}
 
-  '@eeacms/volto-block-data-table@2.0.2':
-    resolution: {integrity: sha512-mvtHzJvSKRr7z7OnI2hF1KhU79AllJ2qHHz9VU0d1I03NOjttnnkXJVKVTjNvQpCqdr1lEpXfsiL/DR4yVZqkA==}
+  '@eeacms/volto-block-data-table@2.0.5':
+    resolution: {integrity: sha512-VEYYrUFoTTTEHNYHMImV+BAYvW4PUPjpi2QPClQA+FaqnHiC0NM6v6XVwkptiG0fgs4nYGKnHZnwzYuKrArrbA==}
 
   '@eeacms/volto-block-divider@8.0.2':
     resolution: {integrity: sha512-IfpQKi9myRzsTCLyLiCNnuike4yuJBrpS32KJBFxzhuc7Wk6/3z2CUTiAIH0EIkZLVf3sA20SlRb/T2SDgz0hg==}
 
-  '@eeacms/volto-block-image-cards@4.0.2':
-    resolution: {integrity: sha512-RrefR42aTWfTyK56CgDK6NmAOZHPFEaZqgEePeMkhgzkd/4RPeST91Sn0l07+er7dJLx5ujxuvXO02OiHFuCig==}
+  '@eeacms/volto-block-image-cards@4.0.4':
+    resolution: {integrity: sha512-uXNCTVUUN29JKNuHrx9JFp6rx045pzFLwxNnsO9hhszEJeeQwZIACoKsGsviO/d1sXYIHbDbqdz6xLFomv3Bng==}
     peerDependencies:
       classnames: 2.2.6
       react-loadable: 5.5.0
@@ -3085,11 +3085,14 @@ packages:
   '@eeacms/volto-block-toc@9.0.1':
     resolution: {integrity: sha512-x6q77zZr/++rZDbfe5crcqjl9aLfdWO6vgtpEs28hzuSS1RLs1z3rsPg2gs49V3QFES3OnnvsxwfwoglV09NyQ==}
 
+  '@eeacms/volto-block-toc@9.0.4':
+    resolution: {integrity: sha512-AaFL/o/7kijaEA+JGzgIuXYw144gqVLEH8BkwxpMmpl0dk0PjQjOavkOziLmsLM1N0BGFQtev0AiO1yGbuoysA==}
+
   '@eeacms/volto-call-to-action-block@6.0.1':
     resolution: {integrity: sha512-Yv29wg541ThoXzVeDAsX2coA16GFJIUzvnAk4cpKDEMFGc8uhPnIW9ojOqcFUyeL+h9fMlmPKI2Z4EbFbqjr8A==}
 
-  '@eeacms/volto-columns-block@9.0.4':
-    resolution: {integrity: sha512-9yNgf5wRAsR+l0FYwk1TFxdeR9bj68geYsa6wRcSugem8twDspmswqhbUQQ5XDSjqO8yn8CWYWt23OgLGGmvBg==}
+  '@eeacms/volto-columns-block@9.0.5':
+    resolution: {integrity: sha512-rvveVQwaHno1hGgx1lxus5phTOi1ZrdN6SLi1whJWZQTeHJVjfQBmlf4nm6JCh310daOf3eoBUjd4AlfDfL1ug==}
 
   '@eeacms/volto-controlpanel@2.0.1':
     resolution: {integrity: sha512-HuH5kWRE/LDeSK9iTfZK3YRVzYiSJr2qTBrbqasxvkPfc6zvlhfPM10TcKE9XTJG8O3gATTA6lOXKox9FaJQLA==}
@@ -3118,8 +3121,8 @@ packages:
   '@eeacms/volto-hero-block@9.0.2':
     resolution: {integrity: sha512-oHo5WQ7EDYKU7+TUsRAa1uE2tg8cBrMLDgo7bEJ7gqlwzOTejb7j5ii3zxj3id8xBhR45hUcwbl43DztzJKs2Q==}
 
-  '@eeacms/volto-listing-block@10.1.0':
-    resolution: {integrity: sha512-r5pWatb5nX/YkgnBBbyNKtr16tlYIN9CFV1vn1STOMKpLIMdTfI9hwNSPkoOkFZR31KlCuU/czN4ZQ5YkqCTeA==}
+  '@eeacms/volto-listing-block@11.0.5':
+    resolution: {integrity: sha512-5AybC/VCcdwkg/6NOWnW88UcYnThgcmf2/TNJCtS3rQCgzgALYYp4y3vQayOkKQFgG3OWzjVGaZQ2gsUAOgxPg==}
 
   '@eeacms/volto-matomo@7.0.1':
     resolution: {integrity: sha512-obohh1BMydleAbOqx/M2+JKW1+73sMKPSNrC3a9PAzaQy3hN7ifjYcROG39wPphnHgR8IbE3Clp8zEYoqxOlPA==}
@@ -3139,8 +3142,8 @@ packages:
   '@eeacms/volto-resize-helper@3.0.1':
     resolution: {integrity: sha512-uuGLyenrSV1zX6vS2L15gmsrWi0pUIZDPRxzMlO6xR6h5zqQe7EBRpIlhZGxZ2IrQzaKex23sui7erJPFB/jyg==}
 
-  '@eeacms/volto-sentry-rancher-config@6.0.3':
-    resolution: {integrity: sha512-W7ZLGbnxiwiRmN/fdJwv1qZhJbvm4nuLIxP0MXVzX4O3EA7OCHDJdmbmbEUruhpbmKSJABLYxtwDbdTJlVl4uQ==}
+  '@eeacms/volto-sentry-rancher-config@6.0.5':
+    resolution: {integrity: sha512-lFv28Vx82R6C+i3hApTyF1b3dPrDvaDCitRwMgzoAYGtwik3XdBaMll6jCm2OMjJW76wXufyOX2m/BdeR3etfA==}
 
   '@eeacms/volto-slate-footnote@8.0.2':
     resolution: {integrity: sha512-IFFjAgcdEW6mqNG8uoKKOJPpvWewcm0ka7ANvGpRHwE8CWko0IvYI05ufbg9E8sKEaVwGYO4YtHvn3XpJcMTvg==}
@@ -3154,11 +3157,11 @@ packages:
   '@eeacms/volto-slate-zotero@7.0.1':
     resolution: {integrity: sha512-PsyvIwU/Fn+pQMtrOflXpZZL0GNCftZMaPfxkt8qsCDwgM+V0aeSSbuT4/WlMDHck0wol7WpMbGnj1MXYkttXA==}
 
-  '@eeacms/volto-statistic-block@7.0.1':
-    resolution: {integrity: sha512-Iq1AuPXUIiPiXZ62U5eRHaCp/VnBGEkgmc9qZRKJt1f+MRHTxlJn9riJb+AnEEPT8YIdxnRyrnf3zqQ4yJbmeg==}
+  '@eeacms/volto-statistic-block@7.0.2':
+    resolution: {integrity: sha512-VB5ZkSQ6vhe6ihfGtF3K7ZZBG1yDIFXqCB9HGCDqObATAjrDyzXa69kl7UcbRFSLnFoKw80ZrLi+xjMT6If0oQ==}
 
-  '@eeacms/volto-tabs-block@10.0.4':
-    resolution: {integrity: sha512-QHewmf/IVOcmZDnUR+NMDUmLVHYdA4Uno/SO8NLyvtlSO+Td/A/u4TGtwHU8+n6f6yhb20vPp//5kzchSjZaMQ==}
+  '@eeacms/volto-tabs-block@10.0.5':
+    resolution: {integrity: sha512-4OzkmOlf9KTJxQHiaiTQNEmVyU5FuFbndE+Gfzw0yKybeuWgSiFLl5EjJYWNNuA7BQVMlekpTSIG+VovD84Xdw==}
 
   '@eeacms/volto-tags-block@4.0.1':
     resolution: {integrity: sha512-jiDAirRIFwmekISdXt+Q6emsRBaf9nCfpfwU2KDKM7PsuYF8KgZAoSPEwVos/oHK/bSL2a+H6PUa1L6WHuAhVQ==}
@@ -4378,8 +4381,8 @@ packages:
     resolution: {integrity: sha512-SEeaJLb3qBNF/OaXnaR1NmmBbFYk1zC0ZH/52fATcRPLFg/p791YrcyFFy44Bo9sLaGuSuLp5Q6axbb/O+v/RA==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  '@plone-collective/volto-sentry@1.0.1':
-    resolution: {integrity: sha512-Y/gUp8IUiEkyMSLfUB3DrWIg6Tk7R/VpzvLZHa076TBpfOyfKNBHJFqIhUEGx/8nXy/VSkjf+1TKKCdZaXFFCw==}
+  '@plone-collective/volto-sentry@1.0.2':
+    resolution: {integrity: sha512-rxbrvNQYsLIowYu2+js2WlN7XSD8ZacZnNOhebeppIkh3VyDv6eRXgKyd637/BCRkjKJTP+dPW0fwdpC5XBFhQ==}
 
   '@plone/babel-preset-razzle@1.0.1':
     resolution: {integrity: sha512-zFgZbGsIANS6Ld+sXBddnuUwRMfz+X28Hf2QMusFpXiRwNgWJW4Aa9Kec+EEcufTLuz3+QFohTtBgb2t6TpE8g==}
@@ -16093,7 +16096,7 @@ snapshots:
 
   '@eeacms/volto-banner@5.1.2': {}
 
-  '@eeacms/volto-block-data-table@2.0.2(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@eeacms/volto-block-data-table@2.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@eeacms/volto-datablocks': 9.0.2(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     transitivePeerDependencies:
@@ -16108,7 +16111,7 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@eeacms/volto-block-image-cards@4.0.2(classnames@2.5.1)(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react-loadable@5.5.0(react@18.2.0))(react@18.2.0)(uuid@14.0.3)':
+  '@eeacms/volto-block-image-cards@4.0.4(classnames@2.5.1)(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react-loadable@5.5.0(react@18.2.0))(react@18.2.0)(uuid@14.0.3)':
     dependencies:
       '@eeacms/volto-object-widget': 9.1.1
       classnames: 2.5.1
@@ -16136,11 +16139,16 @@ snapshots:
       github-slugger: 1.4.0
       smoothscroll-polyfill: 0.4.4
 
+  '@eeacms/volto-block-toc@9.0.4':
+    dependencies:
+      github-slugger: 1.4.0
+      smoothscroll-polyfill: 0.4.4
+
   '@eeacms/volto-call-to-action-block@6.0.1':
     dependencies:
       '@eeacms/volto-widget-theme-picker': 3.0.1
 
-  '@eeacms/volto-columns-block@9.0.4(react@18.2.0)':
+  '@eeacms/volto-columns-block@9.0.5(react@18.2.0)':
     dependencies:
       react-color: 2.19.3(react@18.2.0)
     transitivePeerDependencies:
@@ -16154,7 +16162,7 @@ snapshots:
     dependencies:
       '@eeacms/countup': 3.0.1(react@18.2.0)
       '@eeacms/volto-embed': 11.0.6(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@eeacms/volto-listing-block': 10.1.0(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@eeacms/volto-listing-block': 11.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@eeacms/volto-matomo': 7.0.1(react@18.2.0)
       d3: 7.1.1
       date-fns: 2.28.0
@@ -16203,7 +16211,7 @@ snapshots:
       '@eeacms/volto-object-widget': 9.1.1
       '@eeacms/volto-widget-theme-picker': 3.0.1
 
-  '@eeacms/volto-listing-block@10.1.0(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@eeacms/volto-listing-block@11.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@eeacms/volto-object-widget': 9.1.1
       '@eeacms/volto-widget-theme-picker': 3.0.1
@@ -16248,7 +16256,7 @@ snapshots:
 
   '@eeacms/volto-resize-helper@3.0.1': {}
 
-  '@eeacms/volto-sentry-rancher-config@6.0.3': {}
+  '@eeacms/volto-sentry-rancher-config@6.0.5': {}
 
   '@eeacms/volto-slate-footnote@8.0.2': {}
 
@@ -16260,13 +16268,13 @@ snapshots:
     dependencies:
       '@eeacms/volto-slate-footnote': 8.0.2
 
-  '@eeacms/volto-statistic-block@7.0.1(react@18.2.0)':
+  '@eeacms/volto-statistic-block@7.0.2(react@18.2.0)':
     dependencies:
       '@eeacms/countup': 3.0.1(react@18.2.0)
     transitivePeerDependencies:
       - react
 
-  '@eeacms/volto-tabs-block@10.0.4(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@eeacms/volto-tabs-block@10.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@eeacms/volto-anchors': 2.0.1
       '@eeacms/volto-block-style': 9.0.1(react@18.2.0)
@@ -17527,7 +17535,7 @@ snapshots:
 
   '@pkgr/core@0.3.6': {}
 
-  '@plone-collective/volto-sentry@1.0.1(encoding@0.1.13)':
+  '@plone-collective/volto-sentry@1.0.2(encoding@0.1.13)':
     dependencies:
       '@sentry/browser': 7.15.0
       '@sentry/integrations': 7.15.0
@@ -19759,16 +19767,6 @@ snapshots:
   axe-core@4.4.2: {}
 
   axe-core@4.7.2: {}
-
-  axios@1.20.0:
-    dependencies:
-      follow-redirects: 1.16.1(debug@4.4.3)
-      form-data: 4.0.6
-      https-proxy-agent: 5.0.1
-      proxy-from-env: 2.1.0
-    transitivePeerDependencies:
-      - debug
-      - supports-color
 
   axios@1.20.0(debug@4.3.4):
     dependencies:
@@ -22149,7 +22147,7 @@ snapshots:
     dependencies:
       eslint: 8.57.1
 
-  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)(typescript@5.9.3):
+  eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.29.7(@babel/core@7.29.7))(@babel/plugin-transform-react-jsx@7.29.7(@babel/core@7.29.7))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)(typescript@5.9.3):
     dependencies:
       '@babel/core': 7.29.7
       '@babel/eslint-parser': 7.29.9(@babel/core@7.29.7)(eslint@8.57.1)
@@ -22178,22 +22176,13 @@ snapshots:
 
   eslint-import-resolver-alias@1.1.2(eslint-plugin-import@2.32.0):
     dependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)
 
   eslint-import-resolver-babel-plugin-root-import@1.1.1(babel-plugin-root-import@6.6.0)(eslint-plugin-import@2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)):
     dependencies:
       babel-plugin-root-import: 6.6.0
       eslint-import-resolver-node: 0.2.3
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)
-      json5: 0.5.1
-    transitivePeerDependencies:
-      - supports-color
-
-  eslint-import-resolver-babel-plugin-root-import@1.1.1(babel-plugin-root-import@6.6.0)(eslint-plugin-import@2.32.0):
-    dependencies:
-      babel-plugin-root-import: 6.6.0
-      eslint-import-resolver-node: 0.2.3
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
       json5: 0.5.1
     transitivePeerDependencies:
       - supports-color
@@ -22225,7 +22214,7 @@ snapshots:
       tinyglobby: 0.2.17
       unrs-resolver: 1.12.2
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -22289,35 +22278,6 @@ snapshots:
       - supports-color
 
   eslint-plugin-import@2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1):
-    dependencies:
-      '@rtsao/scc': 1.1.0
-      array-includes: 3.2.0
-      array.prototype.findlastindex: 1.2.6
-      array.prototype.flat: 1.3.3
-      array.prototype.flatmap: 1.3.3
-      debug: 3.2.7(supports-color@8.1.1)
-      doctrine: 2.1.0
-      eslint: 8.57.1
-      eslint-import-resolver-node: 0.3.10
-      eslint-module-utils: 2.14.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-node@0.3.10)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)
-      hasown: 2.0.4
-      is-core-module: 2.17.0
-      is-glob: 4.0.3
-      minimatch: 3.1.5
-      object.fromentries: 2.0.8
-      object.groupby: 1.0.3
-      object.values: 1.2.1
-      semver: 6.3.1
-      string.prototype.trimend: 1.0.10
-      tsconfig-paths: 3.15.0
-    optionalDependencies:
-      '@typescript-eslint/parser': 7.18.0(eslint@8.57.1)(typescript@5.9.3)
-    transitivePeerDependencies:
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
-      - supports-color
-
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.2.0
@@ -30029,7 +29989,7 @@ snapshots:
 
   wait-on@9.5.1:
     dependencies:
-      axios: 1.20.0
+      axios: 1.20.0(debug@4.4.3)
       joi: 18.2.9
       lodash: 4.18.1
       rxjs: 7.8.2
