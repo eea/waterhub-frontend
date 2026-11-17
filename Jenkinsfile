@@ -29,7 +29,22 @@ pipeline {
         node(label: 'docker-big-jobs') {
           script {
             checkout scm
-            env.NODEJS_HOME = "${tool 'NodeJS'}"
+            // The Jenkins 'NodeJS' tool is Node 18, but Volto 19 needs the Node
+            // major from .nvmrc (engine-strict), so download it for this build.
+            env.NODEJS_HOME = "${env.WORKSPACE}@tmp/nodejs"
+            sh '''
+              set -eu
+              NODE_DIST="https://nodejs.org/dist/latest-v$(cat .nvmrc).x"
+              NODE_SUM=$(curl -fsSL "$NODE_DIST/SHASUMS256.txt" | grep -E ' node-v[0-9.]+-linux-x64\\.tar\\.gz$')
+              NODE_TAR=${NODE_SUM##* }
+              rm -rf "$NODEJS_HOME"
+              mkdir -p "$NODEJS_HOME"
+              cd "$NODEJS_HOME"
+              curl -fsSLO "$NODE_DIST/$NODE_TAR"
+              echo "$NODE_SUM" | sha256sum -c -
+              tar -xzf "$NODE_TAR" --strip-components=1
+              rm "$NODE_TAR"
+            '''
             env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
             env.CI=true
 
