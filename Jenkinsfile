@@ -68,10 +68,12 @@ pipeline {
               sh 'pnpm exec wait-on --timeout 120000 http://localhost:3000'
               // The Jenkins agent has no Xvfb or browsers, so run the smoke test in
               // the official Cypress image, on the same network as the frontend.
-              docker.image('cypress/included:13.17.0').inside("--network=${networkName} --shm-size=2g --entrypoint='' -e HOME=/tmp") {
-                sh 'NODE_ENV=test CYPRESS_BASE_URL=http://frontend:3000 ./node_modules/.bin/cypress run --config-file "$PWD/cypress.config.js" --spec "$PWD/cypress/e2e/smoke.cy.js"'
-              }
+              // The workspace can't be bind-mounted from here, so copy the specs in.
+              sh "docker create --name=${env.BUILD_TAG}-cypress --network=${networkName} --shm-size=2g -w /e2e -e CYPRESS_BASE_URL=http://frontend:3000 cypress/included:13.17.0 --config-file smoke.config.js"
+              sh "tar -C cypress -c smoke.config.js e2e | docker cp - ${env.BUILD_TAG}-cypress:/e2e"
+              sh "docker start -a ${env.BUILD_TAG}-cypress"
             } finally {
+              sh script: "docker rm -f ${env.BUILD_TAG}-cypress", returnStatus: true
               sh script: "docker rm -f ${env.BUILD_TAG}-frontend", returnStatus: true
               sh script: "docker rm -f ${env.BUILD_TAG}-backend", returnStatus: true
               sh script: "docker network rm ${networkName}", returnStatus: true
