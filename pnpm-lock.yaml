@@ -113,6 +113,9 @@ importers:
 
   .:
     dependencies:
+      '@babel/runtime':
+        specifier: 7.29.10
+        version: 7.29.10
       '@eeacms/volto-eea-design-system':
         specifier: workspace:*
         version: link:packages/volto-eea-design-system/packages/volto-eea-design-system
@@ -134,6 +137,9 @@ importers:
       '@sentry/cli':
         specifier: 1.77.3
         version: 1.77.3(encoding@0.1.13)
+      postcss:
+        specifier: 8.5.30
+        version: 8.5.30
     devDependencies:
       '@babel/eslint-parser':
         specifier: 7.22.15
@@ -147,6 +153,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^7.7.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.9.3)
+      bundlewatch:
+        specifier: 0.3.3
+        version: 0.3.3
       compression-webpack-plugin:
         specifier: 10.0.0
         version: 10.0.0(webpack@5.112.0(postcss@8.5.30))
@@ -1644,26 +1653,26 @@ importers:
         specifier: 5.1.2
         version: 5.1.2
       '@eeacms/volto-block-data-table':
-        specifier: 2.0.2
-        version: 2.0.2(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 2.0.5
+        version: 2.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@eeacms/volto-block-divider':
         specifier: 8.0.2
         version: 8.0.2(react@18.2.0)
       '@eeacms/volto-block-image-cards':
-        specifier: 4.0.2
-        version: 4.0.2(classnames@2.5.1)(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react-loadable@5.5.0(react@18.2.0))(react@18.2.0)(uuid@14.0.3)
+        specifier: 4.0.4
+        version: 4.0.4(classnames@2.5.1)(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react-loadable@5.5.0(react@18.2.0))(react@18.2.0)(uuid@14.0.3)
       '@eeacms/volto-block-style':
         specifier: 9.0.1
         version: 9.0.1(react@18.2.0)
       '@eeacms/volto-block-toc':
-        specifier: 9.0.1
-        version: 9.0.1
+        specifier: 9.0.4
+        version: 9.0.4
       '@eeacms/volto-call-to-action-block':
         specifier: 6.0.1
         version: 6.0.1
       '@eeacms/volto-columns-block':
-        specifier: 9.0.4
-        version: 9.0.4(react@18.2.0)
+        specifier: 9.0.5
+        version: 9.0.5(react@18.2.0)
       '@eeacms/volto-controlpanel':
         specifier: 2.0.1
         version: 2.0.1
@@ -1680,8 +1689,8 @@ importers:
         specifier: 9.0.2
         version: 9.0.2
       '@eeacms/volto-listing-block':
-        specifier: 10.1.0
-        version: 10.1.0(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 11.0.5
+        version: 11.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@eeacms/volto-matomo':
         specifier: 7.0.1
         version: 7.0.1(react@18.2.0)
@@ -1701,8 +1710,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       '@eeacms/volto-sentry-rancher-config':
-        specifier: 6.0.3
-        version: 6.0.3
+        specifier: 6.0.5
+        version: 6.0.5
       '@eeacms/volto-slate-footnote':
         specifier: 8.0.2
         version: 8.0.2
@@ -1716,11 +1725,11 @@ importers:
         specifier: 7.0.1
         version: 7.0.1
       '@eeacms/volto-statistic-block':
-        specifier: 7.0.1
-        version: 7.0.1(react@18.2.0)
+        specifier: 7.0.2
+        version: 7.0.2(react@18.2.0)
       '@eeacms/volto-tabs-block':
-        specifier: 10.0.4
-        version: 10.0.4(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 10.0.5
+        version: 10.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@eeacms/volto-tags-block':
         specifier: 4.0.1
         version: 4.0.1
@@ -1749,8 +1758,8 @@ importers:
         specifier: 5.0.1
         version: 5.0.1
       '@plone-collective/volto-sentry':
-        specifier: 1.0.1
-        version: 1.0.1(encoding@0.1.13)
+        specifier: 1.0.2
+        version: 1.0.2(encoding@0.1.13)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -2021,15 +2030,30 @@ importers:
 
   packages/volto-waterhub-frontend:
     dependencies:
+      '@loadable/component':
+        specifier: 5.16.7
+        version: 5.16.7(react@18.2.0)
       compression-webpack-plugin:
         specifier: 10.0.0
         version: 10.0.0(webpack@5.112.0(lightningcss@1.33.0)(postcss@8.5.30))
+      friendly-challenge:
+        specifier: 0.9.20
+        version: 0.9.20
       react:
         specifier: 18.2.0
         version: 18.2.0
+      react-dnd:
+        specifier: 5.0.0
+        version: 5.0.0(react@18.2.0)
+      react-dnd-html5-backend:
+        specifier: 5.0.1
+        version: 5.0.1
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      volto-form-block:
+        specifier: 3.19.0
+        version: 3.19.0(@plone/volto@core+packages+volto)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(volto-subblocks@2.1.1(@plone/volto@core+packages+volto)(react@18.2.0))
     devDependencies:
       '@plone/registry':
         specifier: workspace:*
@@ -3051,14 +3075,14 @@ packages:
   '@eeacms/volto-banner@5.1.2':
     resolution: {integrity: sha512-HKsD042kJB+tE16tr1SqAS7UheMLyhQKSAPbRenfEGZK2UFOn4dinG2M4OnrieQexVRcaipg9T6IqK1kkrQvCQ==}
 
-  '@eeacms/volto-block-data-table@2.0.2':
-    resolution: {integrity: sha512-mvtHzJvSKRr7z7OnI2hF1KhU79AllJ2qHHz9VU0d1I03NOjttnnkXJVKVTjNvQpCqdr1lEpXfsiL/DR4yVZqkA==}
+  '@eeacms/volto-block-data-table@2.0.5':
+    resolution: {integrity: sha512-VEYYrUFoTTTEHNYHMImV+BAYvW4PUPjpi2QPClQA+FaqnHiC0NM6v6XVwkptiG0fgs4nYGKnHZnwzYuKrArrbA==}
 
   '@eeacms/volto-block-divider@8.0.2':
     resolution: {integrity: sha512-IfpQKi9myRzsTCLyLiCNnuike4yuJBrpS32KJBFxzhuc7Wk6/3z2CUTiAIH0EIkZLVf3sA20SlRb/T2SDgz0hg==}
 
-  '@eeacms/volto-block-image-cards@4.0.2':
-    resolution: {integrity: sha512-RrefR42aTWfTyK56CgDK6NmAOZHPFEaZqgEePeMkhgzkd/4RPeST91Sn0l07+er7dJLx5ujxuvXO02OiHFuCig==}
+  '@eeacms/volto-block-image-cards@4.0.4':
+    resolution: {integrity: sha512-uXNCTVUUN29JKNuHrx9JFp6rx045pzFLwxNnsO9hhszEJeeQwZIACoKsGsviO/d1sXYIHbDbqdz6xLFomv3Bng==}
     peerDependencies:
       classnames: 2.2.6
       react-loadable: 5.5.0
@@ -3070,11 +3094,14 @@ packages:
   '@eeacms/volto-block-toc@9.0.1':
     resolution: {integrity: sha512-x6q77zZr/++rZDbfe5crcqjl9aLfdWO6vgtpEs28hzuSS1RLs1z3rsPg2gs49V3QFES3OnnvsxwfwoglV09NyQ==}
 
+  '@eeacms/volto-block-toc@9.0.4':
+    resolution: {integrity: sha512-AaFL/o/7kijaEA+JGzgIuXYw144gqVLEH8BkwxpMmpl0dk0PjQjOavkOziLmsLM1N0BGFQtev0AiO1yGbuoysA==}
+
   '@eeacms/volto-call-to-action-block@6.0.1':
     resolution: {integrity: sha512-Yv29wg541ThoXzVeDAsX2coA16GFJIUzvnAk4cpKDEMFGc8uhPnIW9ojOqcFUyeL+h9fMlmPKI2Z4EbFbqjr8A==}
 
-  '@eeacms/volto-columns-block@9.0.4':
-    resolution: {integrity: sha512-9yNgf5wRAsR+l0FYwk1TFxdeR9bj68geYsa6wRcSugem8twDspmswqhbUQQ5XDSjqO8yn8CWYWt23OgLGGmvBg==}
+  '@eeacms/volto-columns-block@9.0.5':
+    resolution: {integrity: sha512-rvveVQwaHno1hGgx1lxus5phTOi1ZrdN6SLi1whJWZQTeHJVjfQBmlf4nm6JCh310daOf3eoBUjd4AlfDfL1ug==}
 
   '@eeacms/volto-controlpanel@2.0.1':
     resolution: {integrity: sha512-HuH5kWRE/LDeSK9iTfZK3YRVzYiSJr2qTBrbqasxvkPfc6zvlhfPM10TcKE9XTJG8O3gATTA6lOXKox9FaJQLA==}
@@ -3103,8 +3130,8 @@ packages:
   '@eeacms/volto-hero-block@9.0.2':
     resolution: {integrity: sha512-oHo5WQ7EDYKU7+TUsRAa1uE2tg8cBrMLDgo7bEJ7gqlwzOTejb7j5ii3zxj3id8xBhR45hUcwbl43DztzJKs2Q==}
 
-  '@eeacms/volto-listing-block@10.1.0':
-    resolution: {integrity: sha512-r5pWatb5nX/YkgnBBbyNKtr16tlYIN9CFV1vn1STOMKpLIMdTfI9hwNSPkoOkFZR31KlCuU/czN4ZQ5YkqCTeA==}
+  '@eeacms/volto-listing-block@11.0.5':
+    resolution: {integrity: sha512-5AybC/VCcdwkg/6NOWnW88UcYnThgcmf2/TNJCtS3rQCgzgALYYp4y3vQayOkKQFgG3OWzjVGaZQ2gsUAOgxPg==}
 
   '@eeacms/volto-matomo@7.0.1':
     resolution: {integrity: sha512-obohh1BMydleAbOqx/M2+JKW1+73sMKPSNrC3a9PAzaQy3hN7ifjYcROG39wPphnHgR8IbE3Clp8zEYoqxOlPA==}
@@ -3124,8 +3151,8 @@ packages:
   '@eeacms/volto-resize-helper@3.0.1':
     resolution: {integrity: sha512-uuGLyenrSV1zX6vS2L15gmsrWi0pUIZDPRxzMlO6xR6h5zqQe7EBRpIlhZGxZ2IrQzaKex23sui7erJPFB/jyg==}
 
-  '@eeacms/volto-sentry-rancher-config@6.0.3':
-    resolution: {integrity: sha512-W7ZLGbnxiwiRmN/fdJwv1qZhJbvm4nuLIxP0MXVzX4O3EA7OCHDJdmbmbEUruhpbmKSJABLYxtwDbdTJlVl4uQ==}
+  '@eeacms/volto-sentry-rancher-config@6.0.5':
+    resolution: {integrity: sha512-lFv28Vx82R6C+i3hApTyF1b3dPrDvaDCitRwMgzoAYGtwik3XdBaMll6jCm2OMjJW76wXufyOX2m/BdeR3etfA==}
 
   '@eeacms/volto-slate-footnote@8.0.2':
     resolution: {integrity: sha512-IFFjAgcdEW6mqNG8uoKKOJPpvWewcm0ka7ANvGpRHwE8CWko0IvYI05ufbg9E8sKEaVwGYO4YtHvn3XpJcMTvg==}
@@ -3139,11 +3166,11 @@ packages:
   '@eeacms/volto-slate-zotero@7.0.1':
     resolution: {integrity: sha512-PsyvIwU/Fn+pQMtrOflXpZZL0GNCftZMaPfxkt8qsCDwgM+V0aeSSbuT4/WlMDHck0wol7WpMbGnj1MXYkttXA==}
 
-  '@eeacms/volto-statistic-block@7.0.1':
-    resolution: {integrity: sha512-Iq1AuPXUIiPiXZ62U5eRHaCp/VnBGEkgmc9qZRKJt1f+MRHTxlJn9riJb+AnEEPT8YIdxnRyrnf3zqQ4yJbmeg==}
+  '@eeacms/volto-statistic-block@7.0.2':
+    resolution: {integrity: sha512-VB5ZkSQ6vhe6ihfGtF3K7ZZBG1yDIFXqCB9HGCDqObATAjrDyzXa69kl7UcbRFSLnFoKw80ZrLi+xjMT6If0oQ==}
 
-  '@eeacms/volto-tabs-block@10.0.4':
-    resolution: {integrity: sha512-QHewmf/IVOcmZDnUR+NMDUmLVHYdA4Uno/SO8NLyvtlSO+Td/A/u4TGtwHU8+n6f6yhb20vPp//5kzchSjZaMQ==}
+  '@eeacms/volto-tabs-block@10.0.5':
+    resolution: {integrity: sha512-4OzkmOlf9KTJxQHiaiTQNEmVyU5FuFbndE+Gfzw0yKybeuWgSiFLl5EjJYWNNuA7BQVMlekpTSIG+VovD84Xdw==}
 
   '@eeacms/volto-tags-block@4.0.1':
     resolution: {integrity: sha512-jiDAirRIFwmekISdXt+Q6emsRBaf9nCfpfwU2KDKM7PsuYF8KgZAoSPEwVos/oHK/bSL2a+H6PUa1L6WHuAhVQ==}
@@ -3619,6 +3646,12 @@ packages:
 
   '@hapi/topo@6.0.2':
     resolution: {integrity: sha512-KR3rD5inZbGMrHmgPxsJ9dbi6zEK+C3ZwUwTa+eMwWLz7oijWUTWD2pMSNNYJAU6Qq+65NkxXjqHr/7LM2Xkqg==}
+
+  '@hcaptcha/react-hcaptcha@0.3.10':
+    resolution: {integrity: sha512-lpxQGKFFPf5fzieY6Z1Hik5zGvXu6GGUnZdmjeGWB+OjzY2ucTPxfN3biPCfy18Od6YKdkkSUZUyteVLdUbigA==}
+    peerDependencies:
+      react: 18.2.0
+      react-dom: 18.2.0
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -4357,8 +4390,8 @@ packages:
     resolution: {integrity: sha512-SEeaJLb3qBNF/OaXnaR1NmmBbFYk1zC0ZH/52fATcRPLFg/p791YrcyFFy44Bo9sLaGuSuLp5Q6axbb/O+v/RA==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  '@plone-collective/volto-sentry@1.0.1':
-    resolution: {integrity: sha512-Y/gUp8IUiEkyMSLfUB3DrWIg6Tk7R/VpzvLZHa076TBpfOyfKNBHJFqIhUEGx/8nXy/VSkjf+1TKKCdZaXFFCw==}
+  '@plone-collective/volto-sentry@1.0.2':
+    resolution: {integrity: sha512-rxbrvNQYsLIowYu2+js2WlN7XSD8ZacZnNOhebeppIkh3VyDv6eRXgKyd637/BCRkjKJTP+dPW0fwdpC5XBFhQ==}
 
   '@plone/babel-preset-razzle@1.0.1':
     resolution: {integrity: sha512-zFgZbGsIANS6Ld+sXBddnuUwRMfz+X28Hf2QMusFpXiRwNgWJW4Aa9Kec+EEcufTLuz3+QFohTtBgb2t6TpE8g==}
@@ -5103,6 +5136,17 @@ packages:
     resolution: {integrity: sha512-yYU8cogLeSh/ms2jh8Fj7jaba/EWa7Ja6GoUqYZaraEuCI5YS6ms6ObZgjjedm+jm6XZjdNRWBpPP6Z86oOxcw==}
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
+
+  '@tanstack/react-table@8.21.2':
+    resolution: {integrity: sha512-11tNlEDTdIhMJba2RBH+ecJ9l1zgS2kjmexDPAraulc8jeNA4xocSNeyzextT0XJyASil4XsCYlJmf5jEWAtYg==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: 18.2.0
+      react-dom: 18.2.0
+
+  '@tanstack/table-core@8.21.2':
+    resolution: {integrity: sha512-uvXk/U4cBiFMxt+p9/G7yUWI/UbHYbyghLCjlpWZ3mLeIZiUBSKcUnw9UnKkdRz7Z/N4UBuFLWQdJCjUe7HjvA==}
+    engines: {node: '>=12'}
 
   '@testing-library/cypress@10.1.0':
     resolution: {integrity: sha512-tNkNtYRqPQh71xXKuMizr146zlellawUfDth7A/urYU4J66g0VGZ063YsS0gqS79Z58u1G/uo9UxN05qvKXMag==}
@@ -6131,6 +6175,10 @@ packages:
     resolution: {integrity: sha512-mK8yQmJJy369cz0x2LJwhKD72tkTObBwhgR+3U8Ts8+wCSspED3ydXlWpsv1ZQ9g2iq4b+7EWli+ap2nTeUQog==}
     engines: {node: '>=16.0.0'}
 
+  autobind-decorator@2.4.0:
+    resolution: {integrity: sha512-OGYhWUO72V6DafbF8PM8rm3EPbfuyMZcJhtm5/n26IDwO18pohE4eNazLoCGhPiXOCD0gEGmrbU3849QvM8bbw==}
+    engines: {node: '>=8.10', npm: '>=6.4.1'}
+
   autoprefixer@10.4.8:
     resolution: {integrity: sha512-75Jr6Q/XpTqEf6D2ltS5uMewJIx5irCU1oBYJrWjFenq/m12WRRrz6g15L1EIoYvPLXTbEry7rDOwrcYNj77xw==}
     engines: {node: ^10 || ^12 || >=14}
@@ -6163,6 +6211,9 @@ packages:
   axe-core@4.7.2:
     resolution: {integrity: sha512-zIURGIS1E1Q4pcrMjp+nnEh+16G56eG/MUllJH8yEvw7asDo7Ac9uhC9KIH5jzpITueEZolfYglnCGIuSBz39g==}
     engines: {node: '>=4'}
+
+  axios@0.24.0:
+    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
 
   axios@1.20.0:
     resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
@@ -6437,6 +6488,11 @@ packages:
     peerDependencies:
       esbuild: '>=0.18'
 
+  bundlewatch@0.3.3:
+    resolution: {integrity: sha512-qzSVWrZyyWXa546JpAPRPTFmnXms9YNVnfzB05DRJKmN6wRRa7SkxE4OgKQmbAY74Z6CM2mKAc6vwvd2R+1lUQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   bytes@3.1.2:
     resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
     engines: {node: '>= 0.8'}
@@ -6564,6 +6620,9 @@ packages:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
+  change-emitter@0.1.6:
+    resolution: {integrity: sha512-YXzt1cQ4a2jqazhcuSWEOc1K2q8g9H6eWNsyZgi640LDzRWVQ2eDe+Y/kVdftH+vYdPF2rgDb3dLdpxE1jvAxw==}
+
   char-regex@1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
     engines: {node: '>=10'}
@@ -6607,6 +6666,9 @@ packages:
   chrome-trace-event@1.0.4:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
+
+  ci-env@1.17.0:
+    resolution: {integrity: sha512-NtTjhgSEqv4Aj90TUYHQLxHdnCPXnjdtuGG1X8lTfp/JqeXTdw0FTWl/vUAPuvbWZTF8QVpv6ASe/XacE+7R2A==}
 
   ci-info@2.0.0:
     resolution: {integrity: sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==}
@@ -6785,6 +6847,10 @@ packages:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
 
+  commander@5.1.0:
+    resolution: {integrity: sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==}
+    engines: {node: '>= 6'}
+
   commander@6.2.1:
     resolution: {integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==}
     engines: {node: '>= 6'}
@@ -6959,9 +7025,16 @@ packages:
   core-js-pure@3.50.0:
     resolution: {integrity: sha512-6GP3Pxz4IKyWjAfa747vIu/jilB5z29JWROLqH/b+pXVcpgh6tM06ZIBwSuglgVqzDYURhOK6oEzTrG0bCHitA==}
 
+  core-js@1.2.7:
+    resolution: {integrity: sha512-ZiPp9pZlgxpWRu0M+YWbm6+aQ84XEfH1JRXvfOc/fILWI0VKhLC2LX13X1NYq4fULzLMq7Hfh43CSo2/aIaUPA==}
+    deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+
   core-js@2.6.12:
     resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
     deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+
+  core-js@3.51.0:
+    resolution: {integrity: sha512-7bDKx/5jm5MxzsXxc93g6Z2+4ZsuT/MddrfRmTDJNAkWsYWHU8EVNEsBiIEWnMAMCHMmRfUEjkuo3jeNBOIHRw==}
 
   core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
@@ -7671,6 +7744,9 @@ packages:
   dnd-core@11.1.3:
     resolution: {integrity: sha512-QugF55dNW+h+vzxVJ/LSJeTeUw9MCJ2cllhmVThVPEtF16ooBkxj0WBE5RB+AceFxMFo1rO6bJKXtqKl+JNnyA==}
 
+  dnd-core@4.0.5:
+    resolution: {integrity: sha512-GSyGmfGom9oyTFJ4Ll/95Dn3ZDvPkrgINwfeOd+gTI0RGIN1TcTGChrHnIHF3A3e1PymyEKZg+3ouN3w2uIJGQ==}
+
   dns-packet@5.6.1:
     resolution: {integrity: sha512-l4gcSouhcgIKRvyy99RNVOgxXiicE+2jZoNmaNmZ6JXiGajBOJAesk1OBlJuM5k2c+eudGdLxDqXuPCKIj6kpw==}
     engines: {node: '>=6'}
@@ -8356,6 +8432,9 @@ packages:
   fb-watchman@2.0.4:
     resolution: {integrity: sha512-tGQtaoYisPDriJBN0mT5yZSyNETnJGA1gTYxaVRAE5KUO3LI9kPUc9WIu8JXcxaIci+faIKlzXqXyPgrmubtBQ==}
 
+  fbjs@0.8.18:
+    resolution: {integrity: sha512-EQaWFK+fEPSoibjNy8IxUtaFOMXcWsY0JaVrQoZR9zC8N2Ygf9iDITPWjUTVIax95b6I742JFLqASHfsag/vKA==}
+
   fd-slicer@1.1.0:
     resolution: {integrity: sha512-cE1qsB/VwyQozZ+q1dGxR8LBYNZeofhEdUNGSMbQD3Gw2lAzX9Zb3uIU6Ebc/Fmyjo9AWWfnn0AUCHqtevs/8g==}
 
@@ -8401,6 +8480,9 @@ packages:
     engines: {node: '>= 10.13.0'}
     peerDependencies:
       webpack: ^4.0.0 || ^5.0.0
+
+  file-saver@2.0.5:
+    resolution: {integrity: sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==}
 
   file-selector@0.1.19:
     resolution: {integrity: sha512-kCWw3+Aai8Uox+5tHCNgMFaUdgidxvMnLWO6fM5sZ0hA2wlHP5/DHGF0ECe84BiB95qdJbKNEJhWKVDvMN+JDQ==}
@@ -8566,6 +8648,12 @@ packages:
   fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==}
     engines: {node: '>= 0.6'}
+
+  friendly-challenge@0.9.20:
+    resolution: {integrity: sha512-aldDMirOcXp6/VwLPZPZNG1q0ODsDzOjUzC/BVCwkX4oWFZrqZ7nNfm+cbAVOsx4rCtHXQqVUFNZlvyHdbElSQ==}
+
+  friendly-pow@0.2.2:
+    resolution: {integrity: sha512-oTGCqr6d9iIv8TEWmqJK8p1Gkr9hDEgb7g22pTCDZz+Y9zaaWtCNxmrD+/+KIYbf1/64rgba5Vj4hU7AxE/vkA==}
 
   from@0.1.7:
     resolution: {integrity: sha512-twe20eF1OxVxp/ML/kq2p1uc6KvFK/+vs8WjEbeKmV2He22MKm7YF2ANIt+EOqhJ5L3K/SuuPhk0hWQDjOM23g==}
@@ -8878,6 +8966,9 @@ packages:
 
   history@4.10.1:
     resolution: {integrity: sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==}
+
+  hoist-non-react-statics@2.5.5:
+    resolution: {integrity: sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==}
 
   hoist-non-react-statics@3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
@@ -9523,6 +9614,9 @@ packages:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
     engines: {node: '>=0.10.0'}
 
+  isomorphic-fetch@2.2.1:
+    resolution: {integrity: sha512-9c4TNAKYXM5PRyVcwUZrF3W09nQ+sO7+jydgs4ZGW9dhsLG2VOlISJABombdQqQRXCwuYG3sYV/puGf5rp0qmA==}
+
   isstream@0.1.2:
     resolution: {integrity: sha512-Yljz7ffyPbrLpLngrMtZ7NduUgVvi6wG9RJ9IUcyCd59YQ911PBJphODUcbOVbqYfxe1wuYf/LJ8PauMRwsM/g==}
 
@@ -9916,6 +10010,9 @@ packages:
 
   jsonfile@6.2.1:
     resolution: {integrity: sha512-zwOTdL3rFQ/lRdBnntKVOX6k5cKJwEc1HdilT71BWEu7J41gXIB2MRp+vxduPSwZJPWBxEzv4yH1wYLJGUHX4Q==}
+
+  jsonpack@1.1.5:
+    resolution: {integrity: sha512-d2vwomK605ks7Q+uCpbwGyoIF5j+UZuJjlYcugISBt3CxM+eBo/W6y63yVPIyIvbYON+pvJYsYZjCYbzqJj/xQ==}
 
   jsonrepair@3.15.0:
     resolution: {integrity: sha512-wy8OTjwsJwQRnQJkKnMJJ9vcytRdBPAgIF/Hy6+s1dAj42BHMKiyL8JzEieIl3JY7idt8eyHwBWTO8mh/+mtwA==}
@@ -10850,6 +10947,9 @@ packages:
   node-fetch-native@1.6.7:
     resolution: {integrity: sha512-g9yhqoedzIUm0nTnTqAQvueMPVOuIY16bqgAJJC8XOOubYFNwz6IER9qs0Gq2Xd0+CecCKFjtdDTMA4u4xG06Q==}
 
+  node-fetch@1.7.3:
+    resolution: {integrity: sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==}
+
   node-fetch@2.7.0:
     resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
     engines: {node: 4.x || >=6.0.0}
@@ -10935,6 +11035,9 @@ packages:
     resolution: {integrity: sha512-W72Hrj1petq+b3Hk2aAC+9zswetlIFTnDW4s5djseZh2nYqBbyQLOtj472HwcbcWykPBUW1WpWpjOd4nK6gMRw==}
     engines: {node: '>=18'}
     hasBin: true
+
+  object-assign-polyfill@0.1.0:
+    resolution: {integrity: sha512-VUMV/J6DvEw4+CVrAezk2Ky6E2ARmCFViD3khtywRc7c/9AAH03L9jkQaji3spp/Tq4hHRb1zoUTDyboScXGUg==}
 
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
@@ -11839,6 +11942,9 @@ packages:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
     engines: {node: '>=0.4.0'}
 
+  promis@1.1.4:
+    resolution: {integrity: sha512-PYoK1UKLWbi+kKcYFVbNhjfh9RhLzIr0jEO12Enw2HXBAX55l0eUemBjRKoeG/qpN8W2vzyKyZk01XTlff6IWw==}
+
   promise-file-reader@1.0.2:
     resolution: {integrity: sha512-1f2axkQbYrE4CQaxB3r+l1AhjrJd/wwf57Claj+whwqx703U6qrtcgmuxr5bZUcsamCY+gcLOi/8RUUUKa3zYQ==}
 
@@ -11849,6 +11955,9 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
+
+  promise@7.3.1:
+    resolution: {integrity: sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==}
 
   prompts@2.4.0:
     resolution: {integrity: sha512-awZAKrk3vN6CroQukBL+R9051a4R3zCZBlJm/HBfrSZ8iTpYix3VX1vU4mveiLpiwmOJT4wokTF9m6HUk4KqWQ==}
@@ -12114,11 +12223,19 @@ packages:
   react-dnd-html5-backend@11.1.3:
     resolution: {integrity: sha512-/1FjNlJbW/ivkUxlxQd7o3trA5DE33QiRZgxent3zKme8DwF4Nbw3OFVhTRFGaYhHFNL1rZt6Rdj1D78BjnNLw==}
 
+  react-dnd-html5-backend@5.0.1:
+    resolution: {integrity: sha512-TLEjqDMUHRJAgRvdX2L0ssnF6bL30cVkxwO6+OkxWCoPJoiyS6Y6pl4LRidOjJ7CpeMTKeawFdIlbuezHL4oeQ==}
+
   react-dnd@11.1.3:
     resolution: {integrity: sha512-8rtzzT8iwHgdSC89VktwhqdKKtfXaAyC4wiqp0SywpHG12TTLvfOoL6xNEIUWXwIEWu+CFfDn4GZJyynCEuHIQ==}
     peerDependencies:
       react: 18.2.0
       react-dom: 18.2.0
+
+  react-dnd@5.0.0:
+    resolution: {integrity: sha512-y7qOPo4N7050p5WNli5XNfE5Ij3tl8Gw+Q6jhS0tABO3sCFZzCNKUCMUk7qTQd3t/MMDn2+Ck6xJgsGv+9Qi1A==}
+    peerDependencies:
+      react: 18.2.0
 
   react-docgen-typescript@2.4.0:
     resolution: {integrity: sha512-ZtAp5XTO5HRzQctjPU0ybY0RRCQO19X/8fxn3w7y2VVTUbGHDKULPTL4ky3vB05euSgG5NpALhEhDPvQ56wvXg==}
@@ -12157,6 +12274,12 @@ packages:
 
   react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
+
+  react-google-recaptcha-v3@1.11.0:
+    resolution: {integrity: sha512-kLQqpz/77m8+trpBwzqcxNtvWZYoZ/YO6Vm2cVTHW8hs80BWUfDpC7RDwuAvpswwtSYApWfaSpIDFWAIBNIYxQ==}
+    peerDependencies:
+      react: 18.2.0
+      react-dom: 18.2.0
 
   react-image-gallery@1.2.7:
     resolution: {integrity: sha512-ts7yMWykvZhslGMuvVAUk7a1dJIx9QtIwK6Clv8dOGxPsJid92FRrLvXbZDvkYcUyj48sHalnBhqU6mZNCB2jg==}
@@ -12453,6 +12576,11 @@ packages:
   recast@0.23.21:
     resolution: {integrity: sha512-mFAyJq9vUbSTARLZUvAEf1z3YxlvAwswbmxMx2mPA/MSm4KmpwvwvhsH/NIrZhyOuwD60Lzyw2qh83uCbgTPYw==}
     engines: {node: '>= 4'}
+
+  recompose@0.27.1:
+    resolution: {integrity: sha512-p7xsyi/rfNjHfdP7vPU02uSFa+Q1eHhjKrvO+3+kRP4Ortj+MxEmpmd+UQtBGM2D2iNAjzNI5rCyBKp9Ob5McA==}
+    peerDependencies:
+      react: 18.2.0
 
   recursive-readdir@2.2.2:
     resolution: {integrity: sha512-nRCcW9Sj7NuZwa2XvH9co8NPeXUBhZP7CRKJtU+cS6PW9FpCIFoI5ib0NT1ZrbNuPoRy0ylyCaUL8Gih4LSyFg==}
@@ -12914,6 +13042,9 @@ packages:
   set-value@2.0.1:
     resolution: {integrity: sha512-JxHc1weCN68wRY0fhCoXpyK55m/XPHafOmK4UWD7m2CI14GMcFypt4w/0+NV5f/ZMby2F6S2wwA7fgynh9gWSw==}
     engines: {node: '>=0.10.0'}
+
+  setimmediate@1.0.5:
+    resolution: {integrity: sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==}
 
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
@@ -13476,6 +13607,10 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
+  symbol-observable@1.2.0:
+    resolution: {integrity: sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==}
+    engines: {node: '>=0.10.0'}
+
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
 
@@ -13921,6 +14056,10 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  ua-parser-js@0.7.41:
+    resolution: {integrity: sha512-O3oYyCMPYgNNHuO7Jjk3uacJWZF8loBgwrfd/5LE/HyZ3lUIOdniQ7DNXJcIgZbwioZxk0fLfI4EVnetdiX5jg==}
+    hasBin: true
+
   ufo@1.6.4:
     resolution: {integrity: sha512-JFNbkD1Svwe0KvGi8GOeLcP4kAWQ609twvCdcHxq1oSL8svv39ZuSvajcD8B+5D0eL4+s1Is2D/O6KN3qcTeRA==}
 
@@ -14068,6 +14207,9 @@ packages:
 
   url-parse@1.5.10:
     resolution: {integrity: sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==}
+
+  url-polyfill@1.1.14:
+    resolution: {integrity: sha512-p4f3TTAG6ADVF3mwbXw7hGw+QJyw5CnNGvYh5fCuQQZIiuKUswqcznyV3pGDP9j0TSmC4UvRKm8kl1QsX1diiQ==}
 
   url@0.11.4:
     resolution: {integrity: sha512-oCwdVC7mTuWiPyjLUz/COz5TLk6wgp0RCsN+wHZ2Ekneac9w8uuV0njcbbie2ME+Vs+d6duwmYuR3HgQXs1fOg==}
@@ -14277,6 +14419,17 @@ packages:
       jsdom:
         optional: true
 
+  volto-form-block@3.19.0:
+    resolution: {integrity: sha512-io7KV/OjJqxA1VbaHhJkkYA6FO7q8mlTYsnSBll6SPuQDH8+6rqFyGVsuE4Hgx8WWj/mE5/pqV9fBH+Q1t96wg==}
+    peerDependencies:
+      '@plone/volto': '>=16.0.0-alpha.38'
+      volto-subblocks: ^2.1.0
+
+  volto-subblocks@2.1.1:
+    resolution: {integrity: sha512-6E6Uh3uHf0LLcnxvWH6upH0CoSSDtRRCGhgvDEOMmSYKoMpVERhbq/jN/BRhBBxjjLNCKNcwrB21PJl6JtNomQ==}
+    peerDependencies:
+      '@plone/volto': '>=16.0.0-alpha.38'
+
   volto-subsites@https://codeload.github.com/collective/volto-subsites/tar.gz/e0973caa66a164635c4f0976b3f16e10b44d679f:
     resolution: {tarball: https://codeload.github.com/collective/volto-subsites/tar.gz/e0973caa66a164635c4f0976b3f16e10b44d679f}
     version: 4.0.2
@@ -14463,6 +14616,9 @@ packages:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
     deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+
+  whatwg-fetch@3.6.20:
+    resolution: {integrity: sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg==}
 
   whatwg-mimetype@2.3.0:
     resolution: {integrity: sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==}
@@ -15967,7 +16123,7 @@ snapshots:
 
   '@eeacms/volto-banner@5.1.2': {}
 
-  '@eeacms/volto-block-data-table@2.0.2(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@eeacms/volto-block-data-table@2.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@eeacms/volto-datablocks': 9.0.2(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     transitivePeerDependencies:
@@ -15982,7 +16138,7 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@eeacms/volto-block-image-cards@4.0.2(classnames@2.5.1)(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react-loadable@5.5.0(react@18.2.0))(react@18.2.0)(uuid@14.0.3)':
+  '@eeacms/volto-block-image-cards@4.0.4(classnames@2.5.1)(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react-loadable@5.5.0(react@18.2.0))(react@18.2.0)(uuid@14.0.3)':
     dependencies:
       '@eeacms/volto-object-widget': 9.1.1
       classnames: 2.5.1
@@ -16010,11 +16166,16 @@ snapshots:
       github-slugger: 1.4.0
       smoothscroll-polyfill: 0.4.4
 
+  '@eeacms/volto-block-toc@9.0.4':
+    dependencies:
+      github-slugger: 1.4.0
+      smoothscroll-polyfill: 0.4.4
+
   '@eeacms/volto-call-to-action-block@6.0.1':
     dependencies:
       '@eeacms/volto-widget-theme-picker': 3.0.1
 
-  '@eeacms/volto-columns-block@9.0.4(react@18.2.0)':
+  '@eeacms/volto-columns-block@9.0.5(react@18.2.0)':
     dependencies:
       react-color: 2.19.3(react@18.2.0)
     transitivePeerDependencies:
@@ -16028,7 +16189,7 @@ snapshots:
     dependencies:
       '@eeacms/countup': 3.0.1(react@18.2.0)
       '@eeacms/volto-embed': 11.0.6(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@eeacms/volto-listing-block': 10.1.0(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@eeacms/volto-listing-block': 11.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@eeacms/volto-matomo': 7.0.1(react@18.2.0)
       d3: 7.1.1
       date-fns: 2.28.0
@@ -16077,7 +16238,7 @@ snapshots:
       '@eeacms/volto-object-widget': 9.1.1
       '@eeacms/volto-widget-theme-picker': 3.0.1
 
-  '@eeacms/volto-listing-block@10.1.0(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@eeacms/volto-listing-block@11.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@eeacms/volto-object-widget': 9.1.1
       '@eeacms/volto-widget-theme-picker': 3.0.1
@@ -16122,7 +16283,7 @@ snapshots:
 
   '@eeacms/volto-resize-helper@3.0.1': {}
 
-  '@eeacms/volto-sentry-rancher-config@6.0.3': {}
+  '@eeacms/volto-sentry-rancher-config@6.0.5': {}
 
   '@eeacms/volto-slate-footnote@8.0.2': {}
 
@@ -16134,13 +16295,13 @@ snapshots:
     dependencies:
       '@eeacms/volto-slate-footnote': 8.0.2
 
-  '@eeacms/volto-statistic-block@7.0.1(react@18.2.0)':
+  '@eeacms/volto-statistic-block@7.0.2(react@18.2.0)':
     dependencies:
       '@eeacms/countup': 3.0.1(react@18.2.0)
     transitivePeerDependencies:
       - react
 
-  '@eeacms/volto-tabs-block@10.0.4(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@eeacms/volto-tabs-block@10.0.5(jquery@4.0.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@eeacms/volto-anchors': 2.0.1
       '@eeacms/volto-block-style': 9.0.1(react@18.2.0)
@@ -16500,6 +16661,11 @@ snapshots:
   '@hapi/topo@6.0.2':
     dependencies:
       '@hapi/hoek': 11.0.7
+
+  '@hcaptcha/react-hcaptcha@0.3.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
@@ -17396,7 +17562,7 @@ snapshots:
 
   '@pkgr/core@0.3.6': {}
 
-  '@plone-collective/volto-sentry@1.0.1(encoding@0.1.13)':
+  '@plone-collective/volto-sentry@1.0.2(encoding@0.1.13)':
     dependencies:
       '@sentry/browser': 7.15.0
       '@sentry/integrations': 7.15.0
@@ -18394,6 +18560,14 @@ snapshots:
       '@tailwindcss/oxide': 4.3.3
       tailwindcss: 4.3.3
       vite: 6.4.4(@types/node@24.19.2)(jiti@2.7.0)(less@3.13.1)(lightningcss@1.33.0)(sass@1.58.0)(terser@5.51.2)(yaml@2.9.1)
+
+  '@tanstack/react-table@8.21.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@tanstack/table-core': 8.21.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
+  '@tanstack/table-core@8.21.2': {}
 
   '@testing-library/cypress@10.1.0(cypress@15.16.0)':
     dependencies:
@@ -19593,6 +19767,8 @@ snapshots:
       toml-eslint-parser: 0.10.1
       yaml-eslint-parser: 1.3.2
 
+  autobind-decorator@2.4.0: {}
+
   autoprefixer@10.4.8(postcss@8.5.30):
     dependencies:
       browserslist: 4.29.3
@@ -19618,6 +19794,12 @@ snapshots:
   axe-core@4.4.2: {}
 
   axe-core@4.7.2: {}
+
+  axios@0.24.0:
+    dependencies:
+      follow-redirects: 1.16.1(debug@4.4.3)
+    transitivePeerDependencies:
+      - debug
 
   axios@1.20.0(debug@4.3.4):
     dependencies:
@@ -20090,6 +20272,21 @@ snapshots:
       esbuild: 0.27.7
       load-tsconfig: 0.2.5
 
+  bundlewatch@0.3.3:
+    dependencies:
+      axios: 0.24.0
+      bytes: 3.1.2
+      chalk: 4.1.2
+      ci-env: 1.17.0
+      commander: 5.1.0
+      glob: 7.2.3
+      gzip-size: 6.0.0
+      jsonpack: 1.1.5
+      lodash.merge: 4.6.2
+      read-pkg-up: 7.0.1
+    transitivePeerDependencies:
+      - debug
+
   bytes@3.1.2: {}
 
   bytestreamjs@2.0.1: {}
@@ -20279,6 +20476,8 @@ snapshots:
 
   chalk@5.6.2: {}
 
+  change-emitter@0.1.6: {}
+
   char-regex@1.0.2: {}
 
   chardet@0.7.0: {}
@@ -20316,6 +20515,8 @@ snapshots:
   chownr@2.0.0: {}
 
   chrome-trace-event@1.0.4: {}
+
+  ci-env@1.17.0: {}
 
   ci-info@2.0.0: {}
 
@@ -20481,6 +20682,8 @@ snapshots:
   commander@2.20.3: {}
 
   commander@4.1.1: {}
+
+  commander@5.1.0: {}
 
   commander@6.2.1: {}
 
@@ -20650,7 +20853,11 @@ snapshots:
 
   core-js-pure@3.50.0: {}
 
+  core-js@1.2.7: {}
+
   core-js@2.6.12: {}
+
+  core-js@3.51.0: {}
 
   core-util-is@1.0.2: {}
 
@@ -21552,6 +21759,13 @@ snapshots:
       '@react-dnd/invariant': 2.0.0
       redux: 4.2.1
 
+  dnd-core@4.0.5:
+    dependencies:
+      asap: 2.0.6
+      invariant: 2.2.4
+      lodash: 4.18.1
+      redux: 4.2.1
+
   dns-packet@5.6.1:
     dependencies:
       '@leichtgewicht/ip-codec': 2.0.5
@@ -21708,7 +21922,6 @@ snapshots:
   encoding@0.1.13:
     dependencies:
       iconv-lite: 0.6.3
-    optional: true
 
   end-of-stream@1.4.5:
     dependencies:
@@ -22590,6 +22803,16 @@ snapshots:
     dependencies:
       bser: 2.1.2
 
+  fbjs@0.8.18:
+    dependencies:
+      core-js: 1.2.7
+      isomorphic-fetch: 2.2.1
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      promise: 7.3.1
+      setimmediate: 1.0.5
+      ua-parser-js: 0.7.41
+
   fd-slicer@1.1.0:
     dependencies:
       pend: 1.2.0
@@ -22629,6 +22852,8 @@ snapshots:
       loader-utils: 2.0.4
       schema-utils: 3.3.0
       webpack: 5.105.4(esbuild@0.25.12)
+
+  file-saver@2.0.5: {}
 
   file-selector@0.1.19:
     dependencies:
@@ -22849,6 +23074,17 @@ snapshots:
       map-cache: 0.2.2
 
   fresh@0.5.2: {}
+
+  friendly-challenge@0.9.20:
+    dependencies:
+      core-js: 3.51.0
+      friendly-pow: 0.2.2
+      object-assign-polyfill: 0.1.0
+      promis: 1.1.4
+      url-polyfill: 1.1.14
+      whatwg-fetch: 3.6.20
+
+  friendly-pow@0.2.2: {}
 
   from@0.1.7: {}
 
@@ -23204,6 +23440,8 @@ snapshots:
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
       value-equal: 1.0.1
+
+  hoist-non-react-statics@2.5.5: {}
 
   hoist-non-react-statics@3.3.2:
     dependencies:
@@ -23838,6 +24076,11 @@ snapshots:
 
   isobject@3.0.1: {}
 
+  isomorphic-fetch@2.2.1:
+    dependencies:
+      node-fetch: 1.7.3
+      whatwg-fetch: 3.6.20
+
   isstream@0.1.2: {}
 
   issue-parser@7.0.1:
@@ -24099,11 +24342,7 @@ snapshots:
       pretty-format: 26.6.2
       throat: 5.0.0
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - supports-color
-      - ts-node
-      - utf-8-validate
 
   jest-leak-detector@26.6.2:
     dependencies:
@@ -24562,6 +24801,8 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
+
+  jsonpack@1.1.5: {}
 
   jsonrepair@3.15.0: {}
 
@@ -25418,6 +25659,11 @@ snapshots:
 
   node-fetch-native@1.6.7: {}
 
+  node-fetch@1.7.3:
+    dependencies:
+      encoding: 0.1.13
+      is-stream: 1.1.0
+
   node-fetch@2.7.0(encoding@0.1.13):
     dependencies:
       whatwg-url: 5.0.0
@@ -25537,6 +25783,8 @@ snapshots:
       citty: 0.2.2
       pathe: 2.0.3
       tinyexec: 1.3.1
+
+  object-assign-polyfill@0.1.0: {}
 
   object-assign@4.1.1: {}
 
@@ -26493,9 +26741,15 @@ snapshots:
 
   progress@2.0.3: {}
 
+  promis@1.1.4: {}
+
   promise-file-reader@1.0.2: {}
 
   promise-inflight@1.0.1: {}
+
+  promise@7.3.1:
+    dependencies:
+      asap: 2.0.6
 
   prompts@2.4.0:
     dependencies:
@@ -27035,6 +27289,13 @@ snapshots:
     dependencies:
       dnd-core: 11.1.3
 
+  react-dnd-html5-backend@5.0.1:
+    dependencies:
+      autobind-decorator: 2.4.0
+      dnd-core: 4.0.5
+      lodash: 4.18.1
+      shallowequal: 1.1.0
+
   react-dnd@11.1.3(@types/react@18.3.31)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@react-dnd/shallowequal': 2.0.0
@@ -27045,6 +27306,16 @@ snapshots:
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
+
+  react-dnd@5.0.0(react@18.2.0):
+    dependencies:
+      dnd-core: 4.0.5
+      hoist-non-react-statics: 2.5.5
+      invariant: 2.2.4
+      lodash: 4.18.1
+      react: 18.2.0
+      recompose: 0.27.1(react@18.2.0)
+      shallowequal: 1.1.0
 
   react-docgen-typescript@2.4.0(typescript@5.9.3):
     dependencies:
@@ -27090,6 +27361,12 @@ snapshots:
   react-fast-compare@2.0.4: {}
 
   react-fast-compare@3.2.2: {}
+
+  react-google-recaptcha-v3@1.11.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      hoist-non-react-statics: 3.3.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   react-image-gallery@1.2.7(react@18.2.0):
     dependencies:
@@ -27472,6 +27749,16 @@ snapshots:
       source-map: 0.6.1
       tiny-invariant: 1.3.3
       tslib: 2.8.1
+
+  recompose@0.27.1(react@18.2.0):
+    dependencies:
+      babel-runtime: 6.26.0
+      change-emitter: 0.1.6
+      fbjs: 0.8.18
+      hoist-non-react-statics: 2.5.5
+      react: 18.2.0
+      react-lifecycles-compat: 3.0.4
+      symbol-observable: 1.2.0
 
   recursive-readdir@2.2.2:
     dependencies:
@@ -28084,6 +28371,8 @@ snapshots:
       is-extendable: 0.1.1
       is-plain-object: 2.0.4
       split-string: 3.1.0
+
+  setimmediate@1.0.5: {}
 
   setprototypeof@1.2.0: {}
 
@@ -28812,6 +29101,8 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.6.1
 
+  symbol-observable@1.2.0: {}
+
   symbol-tree@3.2.4: {}
 
   synckit@0.12.3:
@@ -29225,6 +29516,8 @@ snapshots:
 
   typescript@5.9.3: {}
 
+  ua-parser-js@0.7.41: {}
+
   ufo@1.6.4: {}
 
   unbox-primitive@1.1.0:
@@ -29376,6 +29669,8 @@ snapshots:
     dependencies:
       querystringify: 2.2.0
       requires-port: 1.0.0
+
+  url-polyfill@1.1.14: {}
 
   url@0.11.4:
     dependencies:
@@ -29698,6 +29993,26 @@ snapshots:
       - terser
       - tsx
       - yaml
+
+  volto-form-block@3.19.0(@plone/volto@core+packages+volto)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(volto-subblocks@2.1.1(@plone/volto@core+packages+volto)(react@18.2.0)):
+    dependencies:
+      '@hcaptcha/react-hcaptcha': 0.3.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@plone/volto': link:core/packages/volto
+      '@tanstack/react-table': 8.21.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      file-saver: 2.0.5
+      react-google-recaptcha-v3: 1.11.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      volto-subblocks: 2.1.1(@plone/volto@core+packages+volto)(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  volto-subblocks@2.1.1(@plone/volto@core+packages+volto)(react@18.2.0):
+    dependencies:
+      '@plone/volto': link:core/packages/volto
+      react-dnd: 5.0.0(react@18.2.0)
+      react-dnd-html5-backend: 5.0.1
+    transitivePeerDependencies:
+      - react
 
   volto-subsites@https://codeload.github.com/collective/volto-subsites/tar.gz/e0973caa66a164635c4f0976b3f16e10b44d679f(@plone/volto@19.5.0(@babel/runtime@7.29.10)(@popperjs/core@2.11.8)(@types/express@4.17.25)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(immutable@4.3.9)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4)(slate-dom@0.118.1(slate@0.118.1))):
     dependencies:
@@ -30160,6 +30475,8 @@ snapshots:
   whatwg-encoding@3.1.1:
     dependencies:
       iconv-lite: 0.6.3
+
+  whatwg-fetch@3.6.20: {}
 
   whatwg-mimetype@2.3.0: {}
 

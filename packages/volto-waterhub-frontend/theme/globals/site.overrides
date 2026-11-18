@@ -15,3 +15,53 @@
   margin-top: 1.25rem;
 }
 
+/*******************************
+        Form block (edit)
+*******************************/
+
+// The EEA theme raises the block selection outline (::before) to z-index auto,
+// which covers the form block content in edit mode and swallows clicks on its
+// fields and the "Add field" button.
+.block .block.form::before {
+  pointer-events: none;
+}
+
+/*******************************
+   Friendly Captcha (form block)
+*******************************/
+
+.block.form .frc-captcha {
+  border: 1px solid fade(@primaryColor, 25%);
+  margin: 1rem 0;
+  font-family: @pageFont;
+
+  * {
+    font-family: @pageFont;
+  }
+
+  .frc-icon {
+    fill: @primaryColor;
+    stroke: @primaryColor;
+  }
+
+  .frc-button {
+    background-color: fade(@primaryColor, 10%);
+    color: @primaryColor;
+
+    &:hover {
+      background-color: fade(@primaryColor, 20%);
+    }
+
+    &:focus {
+      border-color: @primaryColor;
+    }
+  }
+
+  .frc-progress::-webkit-progress-value {
+    background: @primaryColor;
+  }
+
+  .frc-progress::-moz-progress-bar {
+    background: @primaryColor;
+  }
+}

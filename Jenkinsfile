@@ -29,7 +29,22 @@ pipeline {
         node(label: 'docker-big-jobs') {
           script {
             checkout scm
-            env.NODEJS_HOME = "${tool 'NodeJS'}"
+            // The Jenkins 'NodeJS' tool is Node 18, but Volto 19 needs the Node
+            // major from .nvmrc (engine-strict), so download it for this build.
+            env.NODEJS_HOME = "${env.WORKSPACE}@tmp/nodejs"
+            sh '''
+              set -eu
+              NODE_DIST="https://nodejs.org/dist/latest-v$(cat .nvmrc).x"
+              NODE_SUM=$(curl -fsSL "$NODE_DIST/SHASUMS256.txt" | grep -E ' node-v[0-9.]+-linux-x64\\.tar\\.gz$')
+              NODE_TAR=${NODE_SUM##* }
+              rm -rf "$NODEJS_HOME"
+              mkdir -p "$NODEJS_HOME"
+              cd "$NODEJS_HOME"
+              curl -fsSLO "$NODE_DIST/$NODE_TAR"
+              echo "$NODE_SUM" | sha256sum -c -
+              tar -xzf "$NODE_TAR" --strip-components=1
+              rm "$NODE_TAR"
+            '''
             env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
             env.CI=true
 
@@ -49,10 +64,16 @@ pipeline {
               docker.build(imageName, '--build-arg VOLTO_VERSION=19.5.0 .')
               // Adjust the backend image to your project's own backend.
               sh "docker run --rm -d --name=${env.BUILD_TAG}-backend --network=${networkName} --network-alias=backend -e SITE=Plone eeacms/plone-backend"
-              sh "docker run --rm -d --name=${env.BUILD_TAG}-frontend --network=${networkName} -p 3000:3000 -e RAZZLE_INTERNAL_API_PATH=http://backend:8080/Plone -e RAZZLE_DEV_PROXY_API_PATH=http://backend:8080/Plone ${imageName}"
+              sh "docker run --rm -d --name=${env.BUILD_TAG}-frontend --network=${networkName} --network-alias=frontend -p 3000:3000 -e RAZZLE_INTERNAL_API_PATH=http://backend:8080/Plone -e RAZZLE_DEV_PROXY_API_PATH=http://backend:8080/Plone ${imageName}"
               sh 'pnpm exec wait-on --timeout 120000 http://localhost:3000'
-              sh 'pnpm cypress:smoke'
+              // The Jenkins agent has no Xvfb or browsers, so run the smoke test in
+              // the official Cypress image, on the same network as the frontend.
+              // The workspace can't be bind-mounted from here, so copy the specs in.
+              sh "docker create --name=${env.BUILD_TAG}-cypress --network=${networkName} --shm-size=2g -w /e2e -e CYPRESS_BASE_URL=http://frontend:3000 cypress/included:13.17.0 --config-file smoke.config.js"
+              sh "tar -C cypress -c smoke.config.js e2e | docker cp - ${env.BUILD_TAG}-cypress:/e2e"
+              sh "docker start -a ${env.BUILD_TAG}-cypress"
             } finally {
+              sh script: "docker rm -f ${env.BUILD_TAG}-cypress", returnStatus: true
               sh script: "docker rm -f ${env.BUILD_TAG}-frontend", returnStatus: true
               sh script: "docker rm -f ${env.BUILD_TAG}-backend", returnStatus: true
               sh script: "docker network rm ${networkName}", returnStatus: true

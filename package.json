@@ -2,7 +2,7 @@
   "name": "waterhub-frontend-dev",
   "description": "Copernicus Thematic Water Hub Volto frontend",
   "license": "MIT",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "scripts": {
     "preinstall": "npx --yes only-allow pnpm",
     "start": "pnpm build:deps && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto start",
@@ -93,19 +93,22 @@
     "node": "^22 || ^24"
   },
   "dependencies": {
+    "@babel/runtime": "7.29.10",
     "@sentry/cli": "1.77.3",
     "@eeacms/volto-eea-kitkat": "workspace:*",
     "@eeacms/volto-eea-design-system": "workspace:*",
     "@eeacms/volto-eea-website-theme": "workspace:*",
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "@eeacms/volto-waterhub-frontend": "workspace:*"
+    "@eeacms/volto-waterhub-frontend": "workspace:*",
+    "postcss": "8.5.30"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.22.15",
     "@cypress/code-coverage": "^3.10.0",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
+    "bundlewatch": "0.3.3",
     "cypress": "13.17.0",
     "cypress-fail-fast": "^5.0.1",
     "compression-webpack-plugin": "10.0.0",
