@@ -12,7 +12,7 @@
     "package": "@eeacms/volto-eea-kitkat",
     "url": "git@github.com:eea/volto-eea-kitkat.git",
     "https": "https://github.com/eea/volto-eea-kitkat.git",
-    "branch": "volto19",
+    "branch": "volto19-snapshot",
     "filterBlobs": true
   },
   "volto-eea-design-system": {
