@@ -48,6 +48,7 @@ RUN <<EOT
     corepack prepare pnpm@10.20.0 --activate
     chown -R node:node /opt/corepack
     chmod +x /app/entrypoint.sh
+    ln -s /app/core/packages/volto/build /app/build
 EOT
 
 USER node
