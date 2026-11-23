@@ -1,0 +1,7 @@
+/*******************************
+          Breadcrumb
+*******************************/
+
+@dividerColor: @waterhubWater900;
+@activeColor: @waterhubWater900;
+@activeFontWeight: @bold;

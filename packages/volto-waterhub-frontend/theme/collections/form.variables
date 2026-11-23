@@ -1,0 +1,6 @@
+/*******************************
+            Form
+*******************************/
+
+@inputBorderColor: @waterhubBorderBrand;
+@labelFontWeight: @bold;

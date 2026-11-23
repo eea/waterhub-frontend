@@ -1,0 +1,10 @@
+/*******************************
+             Table
+*******************************/
+
+@rowBorder: 1px solid @waterhubBorder;
+@cellBorder: 1px solid @waterhubBorder;
+@headerBorder: 2px solid @secondaryColor;
+@headerColor: @secondaryColor;
+@headerFontSize: @font-size-0;
+@stripedBackground: @waterhubSurfaceAlt;

@@ -1,0 +1,6 @@
+/*******************************
+            Input
+*******************************/
+
+@border: @borderWidth solid @waterhubBorderBrand;
+@placeholderColor: @waterhubTextMuted;
