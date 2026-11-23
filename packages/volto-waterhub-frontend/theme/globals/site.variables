@@ -2,4 +2,154 @@
          Site Settings
 *******************************/
 
-@primaryColor: #625ca4;
+/*-------------------
+   Primitive palette
+--------------------*/
+
+@waterhubPurple800: #3e3a6e;
+@waterhubPurple700: #4e4a85;
+@waterhubPurple600: #615c9f;
+@waterhubPurple200: #d6d4e9;
+@waterhubPurple100: #efeef6;
+@waterhubPurple50: #f7f6fb;
+
+@waterhubEuBlue: #024494;
+@waterhubViolet: #4900a9;
+@waterhubYellow: #fabc20;
+@waterhubCopYellow: #ffcb2b;
+
+@waterhubWater900: #083b5d;
+@waterhubWater800: #0b4f7c;
+@waterhubWater600: #007ab8;
+@waterhubWater100: #e5f2f8;
+@waterhubWater50: #f2f8fb;
+@waterhubWaterSlate: #4a6f8a;
+
+@waterhubTeal: #00a4b5;
+@waterhubTealLight: #5fc3cf;
+
+@waterhubAmber: #f1a712;
+@waterhubAmber50: #fff6e0;
+@waterhubAmber700: #7a4e00;
+
+/*-------------------
+   Semantic colours
+--------------------*/
+
+@waterhubBrand: @waterhubPurple600;
+@waterhubBrandStrong: @waterhubPurple700;
+@waterhubBrandSubtle: @waterhubPurple100;
+@waterhubOnBrand: #ffffff;
+
+@waterhubText: #1a1a1a;
+@waterhubTextMuted: #6c6e73;
+@waterhubHeading: #1a1a1a;
+@waterhubHeadingBlock: @waterhubEuBlue;
+@waterhubLink: @waterhubPurple600;
+@waterhubLinkHover: @waterhubPurple800;
+@waterhubTextInverse: #ffffff;
+
+@waterhubSurface: #ffffff;
+@waterhubSurfaceAlt: #f6f7f7;
+@waterhubSurfaceBrand: @waterhubPurple50;
+@waterhubSurfaceWater: @waterhubWater50;
+@waterhubOverlayScrim: fade(#1a1a1a, 60%);
+
+@waterhubBorder: #dadada;
+@waterhubBorderStrong: #6c6e73;
+@waterhubBorderBrand: @waterhubPurple600;
+@waterhubFocus: @waterhubEuBlue;
+
+@waterhubSuccess: #2e7d4f;
+@waterhubSuccessBg: #e7f4ec;
+@waterhubError: #c41e2c;
+@waterhubErrorBg: #fdecee;
+@waterhubWarning: @waterhubAmber700;
+@waterhubWarningBg: @waterhubAmber50;
+@waterhubInfo: @waterhubWater800;
+@waterhubInfoBg: @waterhubWater100;
+
+@waterhubTextLead: #404040;
+@waterhubBlockTitleRule: #4273af;
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@fontName: 'Arimo';
+@waterhubKeywordFont: 'Archivo Black', @fontName, Arial, sans-serif;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor: @waterhubBrand;
+@lightPrimaryColor: @waterhubPurple200;
+@darkPrimaryColor: @waterhubPurple800;
+
+@secondaryColor: @waterhubEuBlue;
+@lightSecondaryColor: @waterhubBlockTitleRule;
+@darkSecondaryColor: @waterhubWater900;
+
+@tertiaryColor: @waterhubWater800;
+@darkTertiaryColor: @waterhubWater900;
+
+/*-------------------
+   Text and links
+--------------------*/
+
+@textColor: @waterhubText;
+@contentAreaColor: @waterhubText;
+@linkColor: @waterhubLink;
+@linkHoverColor: @waterhubLinkHover;
+@linkVisitedColor: @waterhubPurple700;
+@linkActiveColor: @waterhubLinkHover;
+
+/*-------------------
+     Type scale
+--------------------*/
+
+@waterhubHeadingXL: unit((44 / @fontSize), rem);
+@waterhubHeadingL: unit((32 / @fontSize), rem);
+@waterhubHeadingM: unit((22 / @fontSize), rem);
+@waterhubHeadingS: unit((18 / @fontSize), rem);
+
+@waterhubMobileHeadingXL: unit((32 / @fontSize), rem);
+@waterhubMobileHeadingL: unit((25 / @fontSize), rem);
+@waterhubMobileHeadingM: unit((20 / @fontSize), rem);
+@waterhubMobileHeadingS: unit((18 / @fontSize), rem);
+
+@waterhubBodyFontSize: unit((18 / @fontSize), rem);
+@waterhubMobileBodyFontSize: unit((16 / @fontSize), rem);
+@waterhubBodySmallFontSize: unit((16 / @fontSize), rem);
+@waterhubBodyXSFontSize: unit((14 / @fontSize), rem);
+@waterhubMetaFontSize: unit((13 / @fontSize), rem);
+@waterhubLabelFontSize: unit((12 / @fontSize), rem);
+
+@waterhubBlockTitleFontSize: unit((25 / @fontSize), rem);
+@waterhubCardTitleFontSize: unit((20 / @fontSize), rem);
+@waterhubMobileCardTitleFontSize: unit((18 / @fontSize), rem);
+@waterhubButtonFontSize: unit((16 / @fontSize), rem);
+@waterhubNavUtilityFontSize: unit((16 / @fontSize), rem);
+@waterhubNavMainFontSize: unit((18 / @fontSize), rem);
+@waterhubBannerTitleFontSize: unit((50 / @fontSize), rem);
+@waterhubMobileBannerTitleFontSize: unit((26 / @fontSize), rem);
+
+@h1: @waterhubHeadingXL;
+@h2: @waterhubHeadingM;
+@h3: @waterhubHeadingS;
+@h4: @waterhubBodySmallFontSize;
+@h5: @waterhubBodySmallFontSize;
+@h6: @waterhubBodyXSFontSize;
+@headerLineHeight: 1.2;
+
+@mobileH1: @waterhubMobileHeadingXL;
+@mobileH2: @waterhubMobileHeadingM;
+@mobileH3: @waterhubMobileHeadingS;
+@mobileH4: @waterhubBodySmallFontSize;
+
+/*-------------------
+       Forms
+--------------------*/
+
+@focusedFormBorderColor: @waterhubFocus;

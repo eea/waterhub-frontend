@@ -1,0 +1,7 @@
+/*******************************
+          Page Banner
+*******************************/
+
+.eea.banner .content .title {
+  text-transform: uppercase;
+}

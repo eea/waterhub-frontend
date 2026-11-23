@@ -2,7 +2,29 @@
             Header
 *******************************/
 
-@computerMainSectionHeight: 104px;
+@computerTopSectionHeight: 40px;
+@computerMainSectionHeight: 88px;
 @computerLogoMaxWidth: 280px;
 @computerLogoMarginTop: 0;
 
+@topSectionBackground: @primaryColor;
+@topSectionItemColor: @white;
+@topSectionItemFontWeight: @normal;
+@topSectionItemFontSize: @waterhubNavUtilityFontSize;
+@tabletTopSectionItemFontSize: @waterhubNavUtilityFontSize;
+@dropdownColor: @white;
+@dropdownFontWeight: @normal;
+@dropdownMenuItemBackgroundColorHover: @primaryColor;
+
+@mainMenuGap: @rem-space-9;
+@mainMenuItemColor: @primaryColor;
+@mainMenuItemFontSize: @waterhubNavMainFontSize;
+@mainMenuItemFontWeight: @bold;
+@mainMenuItemPadding: 0;
+@mainMenuItemAlignSelf: center;
+@mainMenuItemActiveColor: @primaryColor;
+@mainMenuItemBorder: 3px solid transparent;
+@mainMenuItemActiveBorder: 3px solid @primaryColor;
+
+@burgerActionBackgroundColor: @primaryColor;
+@megaMenuBackgroundColor: @darkPrimaryColor;

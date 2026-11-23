@@ -2,9 +2,9 @@
             Header
 *******************************/
 
-.top.bar {
-  background: @primaryColor;
-}
+/*-------------------
+       Top bar
+--------------------*/
 
 .top.bar > .ui.container > .item,
 .top.bar > .ui.container > .item > .ui.dropdown,
@@ -18,7 +18,23 @@
   color: @primaryColor;
 }
 
-.search-action {
-  background-color: @primaryColor;
+/*-------------------
+       Main bar
+--------------------*/
+
+.main.bar {
+  border-bottom: 1px solid @waterhubBorder;
 }
 
+.main.bar .main-menu {
+  height: 100%;
+  align-items: center;
+}
+
+.main-menu .item a {
+  padding: @rem-space-2 0;
+}
+
+.search-action {
+  background-color: @darkPrimaryColor;
+}

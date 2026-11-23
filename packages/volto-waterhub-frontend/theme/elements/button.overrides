@@ -1,0 +1,18 @@
+/*******************************
+            Button
+*******************************/
+
+.ui.secondary.button:not(.basic):not(.inverted) {
+  background-color: @white;
+  box-shadow: 0 0 0 2px @primaryColor inset;
+  color: @primaryColor;
+
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:active,
+  &.active {
+    background-color: @primaryColor;
+    color: @white;
+  }
+}

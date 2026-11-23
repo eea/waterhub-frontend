@@ -25,6 +25,8 @@
   ],
   "theme": "",
   "dependencies": {
+    "@fontsource/archivo-black": "5.3.0",
+    "@fontsource/arimo": "5.3.0",
     "@loadable/component": "5.16.7",
     "@plone-collective/volto-authomatic": "3.0.1",
     "compression-webpack-plugin": "10.0.0",

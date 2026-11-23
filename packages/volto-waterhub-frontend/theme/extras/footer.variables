@@ -2,5 +2,5 @@
             Footer
 *******************************/
 
-@mobileFooterBackgroundGradient: #625ca4;
-@computerFooterBackgroundGradient: #625ca4;
+@mobileFooterBackgroundGradient: @primaryColor;
+@computerFooterBackgroundGradient: @primaryColor;
