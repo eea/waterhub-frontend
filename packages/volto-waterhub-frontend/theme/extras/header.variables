@@ -4,7 +4,12 @@
 
 @computerTopSectionHeight: 40px;
 @computerMainSectionHeight: 88px;
-@computerLogoMaxWidth: 280px;
+
+@mobileLogoMaxWidth: @waterhubMobileLogoWidth;
+@tabletLogoMaxWidth: @waterhubMobileLogoWidth;
+@computerLogoMaxWidth: 372px;
+@mobileLogoMarginTop: 0;
+@tabletLogoMarginTop: 0;
 @computerLogoMarginTop: 0;
 
 @topSectionBackground: @primaryColor;
@@ -16,7 +21,9 @@
 @dropdownFontWeight: @normal;
 @dropdownMenuItemBackgroundColorHover: @primaryColor;
 
-@mainMenuGap: @rem-space-9;
+@mainMenuGap: @rem-space-10;
+/* 992-1199px, where 40px doesn't fit next to the brand (see header.overrides) */
+@waterhubMainMenuCompactGap: @rem-space-5;
 @mainMenuItemColor: @primaryColor;
 @mainMenuItemFontSize: @waterhubNavMainFontSize;
 @mainMenuItemFontWeight: @bold;
@@ -28,3 +35,34 @@
 
 @burgerActionBackgroundColor: @primaryColor;
 @megaMenuBackgroundColor: @darkPrimaryColor;
+/* EEA leaves a 6% gap on the left; our burger sits there (see Mobile header) */
+@mobileMegaMenuWidth: 100%;
+/* EEA pads 36px on all sides on tablet; keep the header's 20px gutter */
+@tabletMegaMenuPadding: @rem-space-9 0;
+
+/* WaterHub header (see header.overrides) */
+@waterhubTopBarGap: @rem-space-6;
+@waterhubSearchInputWidth: 220px;
+@waterhubSearchHeight: 28px;
+@waterhubSearchButtonWidth: 32px;
+
+/* Logged-in account (Figma: Header, Desktop, Logged in > User) */
+@waterhubAccountGap: 6px;
+@waterhubAccountIconSize: 16px;
+/* The menu isn't in Figma: a plain panel under the top bar */
+@waterhubAccountMenuOffset: @rem-space-3;
+@waterhubAccountMenuMinWidth: 160px;
+@waterhubAccountMenuShadow: 0 4px 12px fade(@black, 15%);
+@waterhubAccountMenuHoverBackground: @waterhubPurple100;
+@waterhubBrandGap: @rem-space-6;
+@waterhubHubPillFontSize: @waterhubNavMainFontSize;
+@waterhubHubPillRadius: 10px;
+
+/* Mobile header (Figma: brand bar with menu, pill and search; logo row below) */
+@waterhubMobileBarHeight: 64px;
+@waterhubMobileActionSize: 48px;
+@waterhubMobileActionIconSize: 24px;
+@waterhubMobileLogoWidth: 350px;
+@waterhubMobileLogoRowPadding: @rem-space-3;
+@waterhubMobileHubPillBackground: @darkPrimaryColor;
+@waterhubMobileHubPillHoverBackground: @waterhubPurple700;

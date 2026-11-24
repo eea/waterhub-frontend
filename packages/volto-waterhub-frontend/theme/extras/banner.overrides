@@ -5,3 +5,12 @@
 .eea.banner .content .title {
   text-transform: uppercase;
 }
+
+/* EEA uses the mobile title up to 767px; Figma's mobile mode starts at 700px */
+@media only screen and (min-width: @waterhubTabletBreakpoint) and (max-width: @largestMobileScreen) {
+  .eea.banner .gradient .content .title {
+    margin: @tabletTitleMargin;
+    font-size: @tabletTitleFontSize;
+    line-height: @tabletTitleLineHeight;
+  }
+}
