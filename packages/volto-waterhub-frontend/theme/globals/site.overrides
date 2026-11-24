@@ -35,9 +35,29 @@
   --font-keyword: @waterhubKeywordFont;
 }
 
-@media only screen and (min-width: @tabletBreakpoint) {
+@media only screen and (min-width: @waterhubTabletBreakpoint) {
   :root {
     --text-body: @waterhubBodyFontSize;
+  }
+}
+
+/* EEA switches headings to their mobile sizes up to 767px; Figma's mobile
+   mode starts at 700px, so keep the desktop sizes in between */
+@media only screen and (min-width: @waterhubTabletBreakpoint) and (max-width: @largestMobileScreen) {
+  h1 {
+    font-size: @h1;
+  }
+
+  h2 {
+    font-size: @h2;
+  }
+
+  h3 {
+    font-size: @h3;
+  }
+
+  h4 {
+    font-size: @h4;
   }
 }
 
@@ -49,6 +69,22 @@
 #page-edit,
 #page-add {
   font-size: var(--text-body);
+}
+
+/* Figma: pages put 80px (space/2xl) between the last section and the footer.
+   Semantic gives the content area 16px padding and 16px margin */
+.ui.basic.segment.content-area {
+  padding-bottom: @waterhubPageEndSpace;
+  margin-bottom: 0;
+}
+
+/* From 1200px EEA lets #page-document go full width and caps each block
+   at @containerWidth, so the gutter has to come from here */
+@media only screen and (min-width: @largeMonitorBreakpoint) {
+  #page-document {
+    padding-right: @waterhubContainerGutter;
+    padding-left: @waterhubContainerGutter;
+  }
 }
 
 #page-document .headline,

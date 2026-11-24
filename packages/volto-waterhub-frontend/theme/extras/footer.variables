@@ -4,3 +4,31 @@
 
 @mobileFooterBackgroundGradient: @primaryColor;
 @computerFooterBackgroundGradient: @primaryColor;
+
+/* WaterHub footer (see footer.overrides) */
+@waterhubFooterBackground: @primaryColor;
+@waterhubFooterColor: @white;
+@waterhubFooterRuleColor: @lightPrimaryColor;
+@waterhubFooterColumnGap: @rem-space-20;
+@waterhubFooterSectionGap: @rem-space-20;
+
+@waterhubFooterTitleFontSize: @waterhubHeadingM;
+@waterhubFooterTextFontSize: @waterhubBodyXSFontSize;
+@waterhubFooterServiceFontSize: @waterhubMetaFontSize;
+@waterhubFooterImplementedFontSize: @waterhubLabelFontSize;
+
+@waterhubFooterLogoHeight: 56px;
+@waterhubFooterEEALogoHeight: 60px;
+@waterhubMobileFooterLogoHeight: 44px;
+@waterhubFooterServiceIconSize: 52px;
+@waterhubFooterSocialSize: 40px;
+@waterhubFooterSocialIconSize: 20px;
+
+@waterhubFooterBottomBackground: @white;
+@waterhubFooterBottomLinkColor: @primaryColor;
+
+@waterhubFooterAccentHeight: 120px;
+@waterhubFooterAccentViolet: @waterhubViolet;
+@waterhubFooterAccentYellow: @waterhubYellow;
+/* Figma color/legacy/bar-green (not in the site palette) */
+@waterhubFooterAccentMint: #81c5a5;

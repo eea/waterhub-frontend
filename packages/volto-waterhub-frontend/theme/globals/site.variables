@@ -149,6 +149,32 @@
 @mobileH4: @waterhubBodySmallFontSize;
 
 /*-------------------
+       Layout
+--------------------*/
+
+/* Figma: 1400px container with a 20px gutter, so 1360px of content */
+@waterhubContainerWidth: 1360px;
+@waterhubContainerGutter: @rem-space-5;
+@waterhubFluidContainerWidth: ~'min(@{waterhubContainerWidth}, calc(100% - (2 * @{waterhubContainerGutter})))';
+
+/* EEA caps page blocks with these (gutter: see site.overrides) */
+@containerWidth: var(--container-text-width, @waterhubContainerWidth);
+@wideWidth: var(--wide-text-width, @waterhubContainerWidth);
+@wideWidthLaptop: var(--wide-text-laptop-width, @waterhubContainerWidth);
+/* Figma space/2xl: between a page's last section and the footer */
+@waterhubPageEndSpace: @rem-space-20;
+/* Figma layout/reading: text that runs on its own (intros, About, No results) */
+@narrowWidth: var(--narrow-text-width, 760px);
+
+/* Figma breakpoints (max-width). Our own rules use these; EEA's (767, 991,
+   1199) stay for its components, so the header still switches at 991px.
+   700: mobile mode (type sizes, spacing). 1024: item pages and footer stack */
+@waterhubLargestMobileScreen: 700px;
+@waterhubTabletBreakpoint: 701px;
+@waterhubLargestTabletScreen: 1024px;
+@waterhubComputerBreakpoint: 1025px;
+
+/*-------------------
        Forms
 --------------------*/
 
