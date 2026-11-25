@@ -21,6 +21,11 @@ msgstr ""
 msgid "All"
 msgstr ""
 
+#. Default: "Event"
+#: components/NewsEventsListing/NewsEventsCard
+msgid "Event"
+msgstr ""
+
 #. Default: "Events"
 #: components/NewsEventsListing/NewsEventsListingView
 msgid "Events"
@@ -37,8 +42,14 @@ msgid "Listing pagination below results"
 msgstr ""
 
 #. Default: "News"
+#: components/NewsEventsListing/NewsEventsCard
 #: components/NewsEventsListing/NewsEventsListingView
 msgid "News"
+msgstr ""
+
+#. Default: "News & Events card"
+#: components/NewsEventsListing/NewsEventsCard
+msgid "News & Events card"
 msgstr ""
 
 #. Default: "News and events filters"

@@ -10,9 +10,11 @@ import UniversalCard from '@eeacms/volto-listing-block/components/UniversalCard/
 // @ts-expect-error Provided by the registered KitKat bundle.
 import { withUnknownVariationFallback } from '@eeacms/volto-listing-block/blocks/Listing/variations';
 
+import NewsEventsCard, { cardTypeMessage } from '../components/NewsEventsListing/NewsEventsCard';
 import NewsEventsListingView, { NEWS_EVENTS_VARIATION } from '../components/NewsEventsListing/NewsEventsListingView';
 import copernicusEuLogo from '@eeacms/volto-waterhub-frontend/static/logo/copernicus-eu-logo.svg';
 
+const NEWS_EVENTS_CARD_TYPE = 'newsEventsCard';
 const NEWS_EVENTS_VARIATION_TITLE = 'News & Events filter';
 
 const ensureNewsEventsVariationChoice = ({ schema }: { schema: any }) => {
@@ -20,6 +22,13 @@ const ensureNewsEventsVariationChoice = ({ schema }: { schema: any }) => {
   if (choices && !choices.some(([id]: [string]) => id === NEWS_EVENTS_VARIATION)) {
     choices.push([NEWS_EVENTS_VARIATION, NEWS_EVENTS_VARIATION_TITLE]);
   }
+  return schema;
+};
+
+const newsEventsCardSchema = ({ schema }: { schema: any }) => {
+  const modelSchema = schema.properties.itemModel.schema;
+  modelSchema.fieldsets = [{ ...modelSchema.fieldsets[0], fields: ['@type'] }];
+  modelSchema.properties = { '@type': modelSchema.properties['@type'] };
   return schema;
 };
 
@@ -70,6 +79,16 @@ export default function install(config: ConfigType) {
         template: Gallery,
         schemaEnhancer: composeSchema(UniversalCard.schemaEnhancer, Gallery.schemaEnhancer),
       } as never);
+    }
+    const cardTemplates = listing.extensions?.cardTemplates;
+    if (Array.isArray(cardTemplates) && !cardTemplates.some(({ id }) => id === NEWS_EVENTS_CARD_TYPE)) {
+      cardTemplates.push({
+        id: NEWS_EVENTS_CARD_TYPE,
+        isDefault: false,
+        title: cardTypeMessage,
+        template: NewsEventsCard,
+        schemaEnhancer: newsEventsCardSchema,
+      });
     }
     listing.schemaEnhancer = composeSchema(listing.schemaEnhancer, ensureNewsEventsVariationChoice);
     listing.view = withUnknownVariationFallback(NewsEventsListingView);
