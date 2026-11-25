@@ -1,0 +1,259 @@
+/*******************************
+            Footer
+*******************************/
+
+footer.waterhub-footer {
+  align-items: stretch;
+  background: none;
+  color: @waterhubFooterColor;
+  font-family: @pageFont;
+}
+
+/*-------------------
+       Accent
+--------------------*/
+
+.waterhub-footer-accent .ui.container {
+  display: flex;
+  justify-content: flex-end;
+  line-height: 0;
+}
+
+.waterhub-footer-stripes {
+  height: @waterhubFooterAccentHeight;
+  pointer-events: none;
+
+  line {
+    fill: none;
+  }
+
+  .stripe-violet {
+    stroke: @waterhubFooterAccentViolet;
+    stroke-linecap: round;
+    stroke-width: 9;
+  }
+
+  .stripe-mint {
+    stroke: @waterhubFooterAccentMint;
+    stroke-width: 2.4;
+  }
+
+  .stripe-yellow {
+    stroke: @waterhubFooterAccentYellow;
+    stroke-linecap: round;
+    stroke-width: 4.2;
+  }
+}
+
+/*-------------------
+        Main
+--------------------*/
+
+.waterhub-footer-main {
+  padding: @rem-space-10 0 @rem-space-20;
+  background: @waterhubFooterBackground;
+
+  a,
+  a:visited {
+    color: @waterhubFooterColor;
+  }
+
+  p {
+    margin: 0;
+    font-size: @waterhubFooterTextFontSize;
+    line-height: 1.6;
+  }
+}
+
+.waterhub-footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: @waterhubFooterSectionGap;
+  gap: @rem-space-4 @rem-space-6;
+
+  a {
+    display: block;
+    line-height: 0;
+  }
+
+  img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .waterhub-footer-copernicus img {
+    height: @waterhubFooterLogoHeight;
+  }
+
+  .waterhub-footer-eea img {
+    height: @waterhubFooterEEALogoHeight;
+  }
+}
+
+.waterhub-footer-implemented {
+  font-size: @waterhubFooterImplementedFontSize;
+  font-weight: @bold;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.waterhub-footer-columns {
+  display: grid;
+  gap: @rem-space-10;
+  grid-template-columns: 1fr;
+}
+
+.waterhub-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: @rem-space-6;
+
+  .waterhub-footer-title ~ .waterhub-footer-title {
+    margin-top: @rem-space-4;
+  }
+}
+
+.waterhub-footer-title {
+  padding-bottom: @rem-space-4;
+  border-bottom: 1px solid @waterhubFooterRuleColor;
+  margin: 0;
+  color: @waterhubFooterColor;
+  font-family: @pageFont;
+  font-size: @waterhubFooterTitleFontSize;
+  font-weight: @normal;
+  line-height: 1.2;
+}
+
+.waterhub-footer-services {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  gap: @rem-space-6 @rem-space-2;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: @waterhubFooterServiceFontSize;
+    gap: @rem-space-2;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  img {
+    width: @waterhubFooterServiceIconSize;
+    height: @waterhubFooterServiceIconSize;
+    transition: transform 0.2s ease;
+  }
+
+  a:hover,
+  a:focus-visible {
+    text-decoration: underline;
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.waterhub-footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: @rem-space-2;
+  list-style: none;
+
+  a {
+    display: flex;
+    width: @waterhubFooterSocialSize;
+    height: @waterhubFooterSocialSize;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid @waterhubFooterRuleColor;
+    border-radius: 50%;
+    font-size: @waterhubFooterSocialIconSize;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  a:hover,
+  a:focus-visible {
+    background-color: @waterhubFooterColor;
+    color: @waterhubFooterBackground;
+  }
+
+  /* Plone's social_actions icons carry Semantic's `icon` class (EEA convention) */
+  i.icon {
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+}
+
+/*-------------------
+     Legal bar
+--------------------*/
+
+.waterhub-footer-bottom {
+  padding: @rem-space-4 0;
+  background: @waterhubFooterBottomBackground;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: @rem-space-2 @rem-space-10;
+    list-style: none;
+  }
+
+  a,
+  a:visited {
+    color: @waterhubFooterBottomLinkColor;
+    font-size: @waterhubFooterTextFontSize;
+    line-height: 27px;
+    text-decoration: underline;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: @linkHoverColor;
+  }
+}
+
+/*-------------------
+     Responsive
+--------------------*/
+
+@media only screen and (max-width: @waterhubLargestMobileScreen) {
+  .waterhub-footer-logos {
+    .waterhub-footer-copernicus {
+      display: flex;
+      flex-basis: 100%;
+      justify-content: center;
+    }
+
+    .waterhub-footer-copernicus img,
+    .waterhub-footer-eea img {
+      height: @waterhubMobileFooterLogoHeight;
+    }
+  }
+}
+
+/* Figma: the columns stack up to 1024px */
+@media only screen and (min-width: @waterhubComputerBreakpoint) {
+  .waterhub-footer-columns {
+    gap: @rem-space-10 @waterhubFooterColumnGap;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

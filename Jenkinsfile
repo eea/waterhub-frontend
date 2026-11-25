@@ -65,7 +65,7 @@ pipeline {
               // Adjust the backend image to your project's own backend.
               sh "docker run --rm -d --name=${env.BUILD_TAG}-backend --network=${networkName} --network-alias=backend -e SITE=Plone eeacms/plone-backend"
               sh "docker run --rm -d --name=${env.BUILD_TAG}-frontend --network=${networkName} --network-alias=frontend -p 3000:3000 -e RAZZLE_INTERNAL_API_PATH=http://backend:8080/Plone -e RAZZLE_DEV_PROXY_API_PATH=http://backend:8080/Plone ${imageName}"
-              sh 'pnpm exec wait-on --timeout 120000 http://localhost:3000'
+              sh 'pnpm exec wait-on --timeout 300000 http-get://localhost:3000/++api++/'
               // The Jenkins agent has no Xvfb or browsers, so run the smoke test in
               // the official Cypress image, on the same network as the frontend.
               // The workspace can't be bind-mounted from here, so copy the specs in.

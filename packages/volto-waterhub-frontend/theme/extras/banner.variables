@@ -2,7 +2,12 @@
           Page Banner
 *******************************/
 
-@bannerBackgroundColor: @primaryColor;
+@bannerBackgroundColor: @tertiaryColor;
 @computerContentPadding: 3.5rem 0 1.5rem;
-@computerTitleFontSize: 2.5rem;
 
+@mobileTitleFontSize: @waterhubMobileBannerTitleFontSize;
+@tabletTitleFontSize: @waterhubBannerTitleFontSize;
+@computerTitleFontSize: @waterhubBannerTitleFontSize;
+@mobileTitleLineHeight: (54 / 50);
+@tabletTitleLineHeight: (54 / 50);
+@computerTitleLineHeight: (54 / 50);

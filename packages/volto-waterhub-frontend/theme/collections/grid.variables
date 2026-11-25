@@ -1,0 +1,6 @@
+/*******************************
+             Grid
+*******************************/
+
+/* Figma layout/col-gap: 48px between the 12 columns (EEA: 20px) */
+@gutterWidth: @rem-space-12;
