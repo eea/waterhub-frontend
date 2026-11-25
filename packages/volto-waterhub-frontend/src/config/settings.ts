@@ -21,6 +21,7 @@ const ensureNewsEventsVariationChoice = ({ schema }: { schema: any }) => {
     choices.push([NEWS_EVENTS_VARIATION, NEWS_EVENTS_VARIATION_TITLE]);
   }
   return schema;
+};
 
 type EEASettings = {
   headerOpts?: Record<string, unknown>;
@@ -58,7 +59,6 @@ export default function install(config: ConfigType) {
     reactDndHtml5Backend: loadable.lib(() => import('react-dnd-html5-backend')),
   };
 
-<<<<<<< HEAD
   const listing = config.blocks.blocksConfig.listing;
   if (listing) {
     listing.variations = listing.variations || [];
@@ -74,7 +74,7 @@ export default function install(config: ConfigType) {
     listing.schemaEnhancer = composeSchema(listing.schemaEnhancer, ensureNewsEventsVariationChoice);
     listing.view = withUnknownVariationFallback(NewsEventsListingView);
   }
-=======
+
   const eea = (config.settings.eea || {}) as EEASettings;
 
   config.settings.eea = {
@@ -123,7 +123,6 @@ export default function install(config: ConfigType) {
     ],
   };
   config.settings.waterhub = waterhub;
->>>>>>> 78caf7491c52b028407b21874da613dfe6d3e7c4
 
   return config;
 }
