@@ -16,4 +16,37 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: volto\n"
 
+#. Default: "All"
+#: components/NewsEventsListing/NewsEventsListingView
+msgid "All"
+msgstr ""
 
+#. Default: "Events"
+#: components/NewsEventsListing/NewsEventsListingView
+msgid "Events"
+msgstr ""
+
+#. Default: "Found {count} results"
+#: components/NewsEventsListing/NewsEventsListingBody
+msgid "Found {count} results"
+msgstr ""
+
+#. Default: "News"
+#: components/NewsEventsListing/NewsEventsListingView
+msgid "News"
+msgstr ""
+
+#. Default: "News and events filters"
+#: components/NewsEventsListing/NewsEventsListingView
+msgid "News and events filters"
+msgstr ""
+
+#. Default: "No items found in this container."
+#: components/NewsEventsListing/NewsEventsListingBody
+msgid "No items found in this container."
+msgstr ""
+
+#. Default: "Loading"
+#: components/NewsEventsListing/NewsEventsListingBody
+msgid "loading"
+msgstr ""
