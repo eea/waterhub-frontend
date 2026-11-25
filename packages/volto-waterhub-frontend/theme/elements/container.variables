@@ -1,0 +1,9 @@
+/*******************************
+            Container
+*******************************/
+
+/* One fluid width from tablet up (see @waterhubFluidContainerWidth) */
+@mobileGutter: @waterhubContainerGutter;
+@tabletWidth: @waterhubFluidContainerWidth;
+@computerWidth: @waterhubFluidContainerWidth;
+@largeMonitorWidth: @waterhubFluidContainerWidth;

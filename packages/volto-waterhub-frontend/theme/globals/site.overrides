@@ -1,18 +1,137 @@
 /*******************************
+       WaterHub tokens
+*******************************/
+
+:root {
+  --color-brand: @waterhubBrand;
+  --color-brand-strong: @waterhubBrandStrong;
+  --color-brand-subtle: @waterhubBrandSubtle;
+  --color-on-brand: @waterhubOnBrand;
+  --color-text: @waterhubText;
+  --color-text-muted: @waterhubTextMuted;
+  --color-heading: @waterhubHeading;
+  --color-heading-block: @waterhubHeadingBlock;
+  --color-link: @waterhubLink;
+  --color-link-hover: @waterhubLinkHover;
+  --color-text-inverse: @waterhubTextInverse;
+  --color-surface: @waterhubSurface;
+  --color-surface-alt: @waterhubSurfaceAlt;
+  --color-surface-brand: @waterhubSurfaceBrand;
+  --color-surface-water: @waterhubSurfaceWater;
+  --color-overlay-scrim: @waterhubOverlayScrim;
+  --color-border: @waterhubBorder;
+  --color-border-strong: @waterhubBorderStrong;
+  --color-border-brand: @waterhubBorderBrand;
+  --color-focus: @waterhubFocus;
+  --color-success: @waterhubSuccess;
+  --color-success-bg: @waterhubSuccessBg;
+  --color-error: @waterhubError;
+  --color-error-bg: @waterhubErrorBg;
+  --color-warning: @waterhubWarning;
+  --color-warning-bg: @waterhubWarningBg;
+  --color-info: @waterhubInfo;
+  --color-info-bg: @waterhubInfoBg;
+  --text-body: @waterhubMobileBodyFontSize;
+  --font-keyword: @waterhubKeywordFont;
+}
+
+@media only screen and (min-width: @waterhubTabletBreakpoint) {
+  :root {
+    --text-body: @waterhubBodyFontSize;
+  }
+}
+
+/* EEA switches headings to their mobile sizes up to 767px; Figma's mobile
+   mode starts at 700px, so keep the desktop sizes in between */
+@media only screen and (min-width: @waterhubTabletBreakpoint) and (max-width: @largestMobileScreen) {
+  h1 {
+    font-size: @h1;
+  }
+
+  h2 {
+    font-size: @h2;
+  }
+
+  h3 {
+    font-size: @h3;
+  }
+
+  h4 {
+    font-size: @h4;
+  }
+}
+
+/*******************************
        WaterHub content
 *******************************/
 
-#page-document h2 {
-  padding-bottom: 0.45rem;
-  border-bottom: 1px solid fade(@primaryColor, 55%);
-  color: @primaryColor;
-  font-size: 1.25rem;
+#page-document,
+#page-edit,
+#page-add {
+  font-size: var(--text-body);
+}
+
+/* Figma: pages put 80px (space/2xl) between the last section and the footer.
+   Semantic gives the content area 16px padding and 16px margin */
+.ui.basic.segment.content-area {
+  padding-bottom: @waterhubPageEndSpace;
+  margin-bottom: 0;
+}
+
+/* From 1200px EEA lets #page-document go full width and caps each block
+   at @containerWidth, so the gutter has to come from here */
+@media only screen and (min-width: @largeMonitorBreakpoint) {
+  #page-document {
+    padding-right: @waterhubContainerGutter;
+    padding-left: @waterhubContainerGutter;
+  }
+}
+
+#page-document .headline,
+#page-edit .headline,
+#page-add .headline {
+  padding-bottom: @rem-space-3;
+  border-bottom: 1px solid @waterhubBlockTitleRule;
+  margin-bottom: @rem-space-5;
+  color: @waterhubHeadingBlock;
+  font-size: @waterhubBlockTitleFontSize;
+  font-weight: @bold;
   letter-spacing: 0.01em;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
-#page-document h2 + * {
-  margin-top: 1.25rem;
+#page-document p a:not(.ui),
+#page-document li a:not(.ui),
+#page-document td a:not(.ui),
+#page-edit p a:not(.ui),
+#page-edit li a:not(.ui),
+#page-edit td a:not(.ui),
+#page-add p a:not(.ui),
+#page-add li a:not(.ui),
+#page-add td a:not(.ui) {
+  font-weight: @bold;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+#page-document .documentDescription,
+#page-edit .documentDescription,
+#page-add .documentDescription {
+  padding-left: @rem-space-5;
+  border-left: 3px solid @waterhubBorderBrand;
+  color: @waterhubTextLead;
+  font-size: @font-size-3;
+  font-weight: @normal;
+  line-height: 1.6;
+}
+
+.ui.vertical.segment.breadcrumbs {
+  background-color: @waterhubWater100;
+}
+
+.ui.form textarea {
+  font-family: @pageFont;
 }
 
 /*******************************

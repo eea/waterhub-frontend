@@ -1,3 +1,4 @@
+const path = require('path');
 const zlib = require('zlib');
 const CompressionPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
@@ -9,6 +10,11 @@ const modify = (config, { target }) => {
 
   config.resolve.alias['../../theme.config$'] = themeConfigPath;
   config.resolve.alias['../../theme.config'] = themeConfigPath;
+
+  // Let the theme's Less imports resolve the font packages.
+  ['@fontsource/arimo', '@fontsource/archivo-black'].forEach((font) => {
+    config.resolve.alias[font] = path.dirname(require.resolve(`${font}/package.json`));
+  });
 
   // The server bundle runs in Node and is not downloaded by the browser, so
   // Webpack's browser-oriented asset size hints are not useful for this target.

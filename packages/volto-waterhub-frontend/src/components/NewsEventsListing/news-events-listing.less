@@ -1,0 +1,123 @@
+@listingBrand: #615c9f;
+@listingBrandSurface: #f7f6fb;
+@listingBrandHover: #efeef6;
+@listingOnBrand: #fff;
+@listingFocus: #024494;
+@listingText: #1a1a1a;
+
+.news-events-listing-toolbar,
+.news-events-listing-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+}
+
+.news-events-pagination {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  color: @listingText;
+  gap: 8px;
+
+  button {
+    display: inline-flex;
+    min-width: 40px;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    border: 1px solid @listingBrand;
+    border-radius: 2px;
+    background: @listingBrandSurface;
+    color: @listingBrand;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    gap: 4px;
+
+    svg {
+      fill: currentColor;
+    }
+
+    &:hover {
+      background: @listingBrandHover;
+    }
+
+    &:focus-visible {
+      outline: 2px solid @listingFocus;
+      outline-offset: 2px;
+    }
+
+    &[aria-current='page'] {
+      background: @listingBrand;
+      color: @listingOnBrand;
+      font-weight: 700;
+    }
+  }
+}
+
+.news-events-listing-toolbar {
+  margin-bottom: 24px;
+}
+
+.news-events-listing-filter {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.news-events-listing-filter-item {
+  min-height: 44px;
+  padding: 0 24px;
+  border: 1px solid @listingBrand;
+  background: @listingBrandSurface;
+  color: @listingBrand;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+
+  & + & {
+    margin-left: -1px;
+  }
+
+  &:first-child {
+    border-radius: 2px 0 0 2px;
+  }
+
+  &:last-child {
+    border-radius: 0 2px 2px 0;
+  }
+
+  &:hover {
+    background: @listingBrandHover;
+  }
+
+  &:focus-visible {
+    z-index: 1;
+    outline: 2px solid @listingFocus;
+    outline-offset: -3px;
+  }
+
+  &.active {
+    background: @listingBrand;
+    color: @listingOnBrand;
+  }
+
+  &.active:focus-visible {
+    outline-color: @listingOnBrand;
+  }
+}
+
+.news-events-listing-footer {
+  margin-top: 24px;
+}
+
+.news-events-listing-total {
+  color: @listingText;
+  font-weight: 700;
+}

@@ -1,0 +1,10 @@
+/*******************************
+             Card
+*******************************/
+
+@media only screen and (max-width: @waterhubLargestMobileScreen) {
+  .ui.cards > .card > .content > .header:not(.ui),
+  .ui.card > .content > .header:not(.ui) {
+    font-size: @waterhubMobileCardTitleFontSize;
+  }
+}
