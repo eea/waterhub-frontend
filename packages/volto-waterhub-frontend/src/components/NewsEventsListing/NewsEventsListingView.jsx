@@ -4,6 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import ListingBody from '@plone/volto/components/manage/Blocks/Listing/ListingBody';
 import { withBlockExtensions } from '@plone/volto/helpers/Extensions';
+import { usePagination } from '@plone/volto/helpers/Utils/usePagination';
 
 import NewsEventsListingBody from './NewsEventsListingBody';
 import './news-events-listing.less';
@@ -55,23 +56,34 @@ export function getNewsEventsQuerystring(querystring = {}, filterId = 'all') {
   };
 }
 
-const Filter = ({ activeFilter, onChange }) => {
+const getFilteredListingId = (id, filter) => `${id}-${filter}`;
+
+const FilterButton = ({ listingId, active, label, onChange }) => {
+  const { currentPage, setCurrentPage } = usePagination(listingId, 1);
+
+  return (
+    <button
+      className={cx('news-events-listing-filter-item', { active })}
+      type="button"
+      aria-pressed={active}
+      onClick={() => {
+        if (active) return;
+        if (currentPage !== 1) setCurrentPage(1);
+        onChange();
+      }}
+    >
+      {label}
+    </button>
+  );
+};
+
+const Filter = ({ listingId, activeFilter, onChange }) => {
   const intl = useIntl();
 
   return (
     <div className="news-events-listing-filter" role="group" aria-label={intl.formatMessage(messages.filterLabel)}>
       {FILTERS.map(({ id, message }) => (
-        <button
-          className={cx('news-events-listing-filter-item', {
-            active: activeFilter === id,
-          })}
-          key={id}
-          type="button"
-          aria-pressed={activeFilter === id}
-          onClick={() => onChange(id)}
-        >
-          {intl.formatMessage(message)}
-        </button>
+        <FilterButton key={id} listingId={getFilteredListingId(listingId, id)} active={activeFilter === id} label={intl.formatMessage(message)} onChange={() => onChange(id)} />
       ))}
     </div>
   );
@@ -90,12 +102,13 @@ const NewsEventsListingView = (props) => {
   );
 
   const isNewsEventsListing = data.variation === NEWS_EVENTS_VARIATION;
-  const listingId = isNewsEventsListing ? `${id}-${activeFilter}` : id;
+  const listingId = isNewsEventsListing ? getFilteredListingId(id, activeFilter) : id;
   const Body = isNewsEventsListing ? NewsEventsListingBody : ListingBody;
 
   return (
     <div className={cx('block listing', data.variation || 'default', className)} style={style}>
       <Body
+        key={listingId}
         {...props}
         data={isNewsEventsListing ? filteredData : data}
         id={listingId}
@@ -103,7 +116,7 @@ const NewsEventsListingView = (props) => {
         variation={variation}
         {...(isNewsEventsListing && {
           activeFilter,
-          filter: <Filter activeFilter={activeFilter} onChange={setActiveFilter} />,
+          filter: <Filter listingId={id} activeFilter={activeFilter} onChange={setActiveFilter} />,
         })}
       />
     </div>
