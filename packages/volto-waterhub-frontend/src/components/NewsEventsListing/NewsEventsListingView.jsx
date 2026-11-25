@@ -95,8 +95,17 @@ const NewsEventsListingView = (props) => {
 
   return (
     <div className={cx('block listing', data.variation || 'default', className)} style={style}>
-      {isNewsEventsListing && <Filter activeFilter={activeFilter} onChange={setActiveFilter} />}
-      <Body {...props} data={isNewsEventsListing ? filteredData : data} id={listingId} path={path ?? pathname} variation={variation} />
+      <Body
+        {...props}
+        data={isNewsEventsListing ? filteredData : data}
+        id={listingId}
+        path={path ?? pathname}
+        variation={variation}
+        {...(isNewsEventsListing && {
+          activeFilter,
+          filter: <Filter activeFilter={activeFilter} onChange={setActiveFilter} />,
+        })}
+      />
     </div>
   );
 };

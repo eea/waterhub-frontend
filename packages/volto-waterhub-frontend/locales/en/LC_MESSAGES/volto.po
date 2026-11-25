@@ -26,9 +26,14 @@ msgstr ""
 msgid "Events"
 msgstr ""
 
-#. Default: "Found {count} results"
+#. Default: "Listing pagination above results"
 #: components/NewsEventsListing/NewsEventsListingBody
-msgid "Found {count} results"
+msgid "Listing pagination above results"
+msgstr ""
+
+#. Default: "Listing pagination below results"
+#: components/NewsEventsListing/NewsEventsListingBody
+msgid "Listing pagination below results"
 msgstr ""
 
 #. Default: "News"
@@ -41,12 +46,37 @@ msgstr ""
 msgid "News and events filters"
 msgstr ""
 
+#. Default: "Next"
+#: components/NewsEventsListing/NewsEventsPagination
+msgid "Next"
+msgstr ""
+
 #. Default: "No items found in this container."
 #: components/NewsEventsListing/NewsEventsListingBody
 msgid "No items found in this container."
 msgstr ""
 
+#. Default: "Previous"
+#: components/NewsEventsListing/NewsEventsPagination
+msgid "Previous"
+msgstr ""
+
 #. Default: "Loading"
 #: components/NewsEventsListing/NewsEventsListingBody
 msgid "loading"
+msgstr ""
+
+#. Default: "{count} news and events"
+#: components/NewsEventsListing/NewsEventsListingBody
+msgid "{count} news and events"
+msgstr ""
+
+#. Default: "{count, plural, one {# event} other {# events}}"
+#: components/NewsEventsListing/NewsEventsListingBody
+msgid "{count, plural, one {# event} other {# events}}"
+msgstr ""
+
+#. Default: "{count, plural, one {# news item} other {# news items}}"
+#: components/NewsEventsListing/NewsEventsListingBody
+msgid "{count, plural, one {# news item} other {# news items}}"
 msgstr ""
